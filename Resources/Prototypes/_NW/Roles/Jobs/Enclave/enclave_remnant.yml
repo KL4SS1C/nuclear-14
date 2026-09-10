@@ -6,7 +6,7 @@
   displayWeight: 122
   overrideConsoleVisibility: false
   canBeAntag: false
-  name: Enclave Remnant
+  name: job-name-enclave-remnant
   description: job-description-enclave-remnant
   playTimeTracker: EnclaveRemnant
   requirements:
