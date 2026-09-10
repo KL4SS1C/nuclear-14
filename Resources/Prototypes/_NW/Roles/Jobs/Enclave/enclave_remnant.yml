@@ -1,0 +1,50 @@
+- type: job
+  id: EnclaveRemnant
+  setPreference: true
+  jobWhitelistBypassesRoleTimers: true # #Misfits Change
+  weight: 100
+  displayWeight: 122
+  overrideConsoleVisibility: false
+  canBeAntag: false
+  name: Enclave Remnant
+  description: job-description-enclave-remnant
+  playTimeTracker: EnclaveRemnant
+  requirements:
+    - !type:CharacterSpeciesRequirement
+      species:
+      - Human
+    - !type:CharacterDepartmentTimeRequirement # #Misfits Tweak - T2 faction timelock (4h Enclave)
+      department: EnclaveRemnants
+      min: 14400 # #Cythisiax Edited - 10h -> 4h: recruited players unlock Enlisted in 4 hours
+  startingGear: EnclaveRemnantGear
+  icon: "JobIconEnclaveEnlisted"
+  supervisors: job-supervisors-enclave
+  alwaysUseSpawner: true
+  accessGroups:
+  - EnclaveRemnant
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: NpcFactionMember
+        factions:
+          - Enclave Remnants
+          - Wastelander
+      - type: PowerArmorProficiency
+
+- type: startingGear
+  id: EnclaveRemnantGear
+  equipment:
+    back: N14ClothingBackpackMilitary
+    jumpsuit: N14ClothingUniformJumpsuitEnclave
+    shoes: N14ClothingBootsLeather
+    belt: ClothingBeltMilitary
+    ears: N14ClothingHeadsetEnclave
+    id: N14IDEnclaveTrooper
+  satchel: N14ClothingBackpackSatchelMilitaryFilled
+  duffelbag: N14ClothingBackpackDuffelMilitaryFilled
+  storage:
+    back:
+    - N14BoxPlasticFilledMilitary
+
+- type: playTimeTracker
+  id: EnclaveRemnant

@@ -1,0 +1,10 @@
+- type: entity
+  parent: N14ClothingHeadHatBrotherhoodMidwestHelmetRecon
+  id: NWClothingHeadHatEnclaveZuluReconHelmet
+  name: Enclave Zulu Squad Recon helmet
+  description: Helmet used by Enclave Zulu Squad remnants
+  components:
+  - type: Sprite
+    sprite: _NW/Clothing/Head/FalloutHelmets/falloutEnclaveZuluReconHelmet.rsi
+  - type: Clothing
+    sprite: _NW/Clothing/Head/FalloutHelmets/falloutEnclaveZuluReconHelmet.rsi

@@ -1,0 +1,10 @@
+- type: entity
+  parent: N14ClothingHeadHatBrotherhoodMidwestHelmetRecon
+  id: NWClothingHeadHatEnclaveNovemberReconHelmet
+  name: Enclave Night Stalker Recon helmet
+  description: Helmet used by Enclave Night Stalker remnants
+  components:
+  - type: Sprite
+    sprite: _NW/Clothing/Head/FalloutHelmets/falloutEnclaveNovemberReconHelmet.rsi
+  - type: Clothing
+    sprite: _NW/Clothing/Head/FalloutHelmets/falloutEnclaveNovemberReconHelmet.rsi

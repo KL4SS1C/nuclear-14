@@ -1,0 +1,8 @@
+- type: department
+  id: EnclaveRemnants
+  description: department-EnclaveRemnants-description
+  color: "#2d5d91"
+  weight: -101
+  uiCategory: Whitelist
+  roles:
+  - EnclaveRemnant

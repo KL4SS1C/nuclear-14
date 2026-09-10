@@ -1,0 +1,10 @@
+- type: entity
+  parent: N14ClothingOuterMidwestReconArmor
+  id: NWClothingOuterEnclaveNovemberReconArmor
+  name: Enclave Night Stalker Recon Armor
+  description: Armor used by Enclave Night Stalkers remnants
+  components:
+  - type: Sprite
+    sprite: _NW/Clothing/OuterClothing/Armor/falloutEnclaveNovemberReconArmor.rsi
+  - type: Clothing
+    sprite: _NW/Clothing/OuterClothing/Armor/falloutEnclaveNovemberReconArmor.rsi

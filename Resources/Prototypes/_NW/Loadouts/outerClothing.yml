@@ -1,0 +1,45 @@
+- type: loadout
+  id: NWLoadoutOuterEnclaveReconArmor
+  category: Outer
+  cost: 6
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+      - EnclaveRemnants
+    - !type:CharacterJobRequirement
+      jobs:
+      - EnclaveRemnant
+  items:
+    - NWClothingOuterEnclaveReconArmor
+- type: loadout
+  id: NWLoadoutOuterEnclaveZuluReconArmor
+  category: Outer
+  cost: 6
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+      - EnclaveRemnants
+    - !type:CharacterJobRequirement
+      jobs:
+      - EnclaveRemnant
+  items:
+    - NWClothingOuterEnclaveZuluReconArmor
+- type: loadout
+  id: NWLoadoutOuterEnclaveNovemberReconArmor
+  category: Outer
+  cost: 6
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+      - EnclaveRemnants
+    - !type:CharacterJobRequirement
+      jobs:
+      - EnclaveRemnant
+  items:
+    - NWClothingOuterEnclaveNovemberReconArmor

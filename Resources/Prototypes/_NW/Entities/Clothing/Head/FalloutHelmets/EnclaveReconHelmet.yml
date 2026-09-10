@@ -1,0 +1,10 @@
+- type: entity
+  parent: N14ClothingHeadHatBrotherhoodMidwestHelmetRecon
+  id: NWClothingHeadHatEnclaveReconHelmet
+  name: Enclave Recon helmet
+  description: Reconnaissance Helmet used by Enclave remnants
+  components:
+  - type: Sprite
+    sprite: _NW/Clothing/Head/FalloutHelmets/falloutEnclaveReconHelmet.rsi
+  - type: Clothing
+    sprite: _NW/Clothing/Head/FalloutHelmets/falloutEnclaveReconHelmet.rsi

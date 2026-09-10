@@ -1,0 +1,10 @@
+- type: entity
+  parent: N14ClothingOuterMidwestReconArmor
+  id: NWClothingOuterEnclaveZuluReconArmor
+  name: Enclave Zulu Squad Recon Armor
+  description: Armor used by Enclave Zulu Squad remnants
+  components:
+  - type: Sprite
+    sprite: _NW/Clothing/OuterClothing/Armor/falloutEnclaveZuluReconArmor.rsi
+  - type: Clothing
+    sprite: _NW/Clothing/OuterClothing/Armor/falloutEnclaveZuluReconArmor.rsi

@@ -1,0 +1,11 @@
+- type: entity
+  parent: MisfitsSpawnPointEnclaveCommander
+  id: NWSpawnPointEnclaveRemnant
+  name: Enclave Remnant
+  components:
+  - type: SpawnPoint
+    job_id: EnclaveRemnant
+  - type: Sprite
+    layers:
+      - state: green
+      - state: soldier

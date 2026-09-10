@@ -1,0 +1,48 @@
+- type: loadout
+  id: NWClothingHeadHatEnclaveReconHelmet
+  category: Head
+  cost: 2 # Its 10% literally nothing (agreed)
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+      - EnclaveRemnants
+    - !type:CharacterJobRequirement
+      jobs:
+      - EnclaveRemnant
+  items:
+    - NWClothingHeadHatEnclaveReconHelmet
+- type: loadout
+  id: NWClothingHeadHatEnclaveZuluReconHelmet
+  category: Head
+  cost: 2 # Its 10% literally nothing (agreed)
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+      - EnclaveRemnants
+    - !type:CharacterJobRequirement
+      jobs:
+      - EnclaveRemnant
+  items:
+    - NWClothingHeadHatEnclaveZuluReconHelmet
+- type: loadout
+  id: NWClothingHeadHatEnclaveNovemberReconHelmet
+  category: Head
+  cost: 2 # Its 10% literally nothing (agreed)
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+      - EnclaveRemnants
+    - !type:CharacterJobRequirement
+      jobs:
+      - EnclaveRemnant
+  items:
+    - NWClothingHeadHatEnclaveNovemberReconHelmet

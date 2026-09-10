@@ -1,0 +1,10 @@
+- type: entity
+  parent: N14ClothingOuterMidwestReconArmor
+  id: NWClothingOuterEnclaveReconArmor
+  name: Enclave Recon Armor
+  description: Armor used by the Enclave recon corps
+  components:
+  - type: Sprite
+    sprite: _NW/Clothing/OuterClothing/Armor/falloutEnclaveReconArmor.rsi
+  - type: Clothing
+    sprite: _NW/Clothing/OuterClothing/Armor/falloutEnclaveReconArmor.rsi
