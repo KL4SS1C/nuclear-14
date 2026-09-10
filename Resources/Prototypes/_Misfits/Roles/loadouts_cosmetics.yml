@@ -823,6 +823,7 @@
         - EnclaveScientist
         - EnclaveJuniorScientist
         - EnclaveHeadScientist
+        - EnclaveRemnant
   items:
     - N14ClothingHeadHatEnclaveIntel
 
@@ -840,6 +841,7 @@
         - EnclaveSeniorOfficer
         - EnclaveCommander
         - EnclaveReformer
+        - EnclaveRemnant
   items:
     - N14ClothingHeadHatEnclavePeacekeeperCap
 
@@ -855,6 +857,7 @@
         - EnclaveSeniorOfficer
         - EnclaveCommander
         - EnclaveReformer
+        - EnclaveRemnant
   items:
     - N14ClothingHeadHatEnclaveOfficer
 
@@ -868,6 +871,7 @@
         - EnclaveScientist
         - EnclaveJuniorScientist
         - EnclaveHeadScientist
+        - EnclaveRemnant
   items:
     - N14ClothingHeadHatEnclaveScientist
 
@@ -1244,6 +1248,7 @@
     - EnclaveJuniorScientist
     - EnclaveScientist
     - EnclaveHeadScientist
+    - EnclaveRemnant
   items:
   - N14ClothingUniformJumpsuitEnclaveBlue
 
@@ -1266,6 +1271,7 @@
     - EnclaveJuniorScientist
     - EnclaveScientist
     - EnclaveHeadScientist
+    - EnclaveRemnant
   items:
   - N14ClothingUniformJumpsuitEnclaveGrey
 
