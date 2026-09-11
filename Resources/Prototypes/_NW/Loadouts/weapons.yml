@@ -1,0 +1,12 @@
+- type: loadout
+  id: N14WeaponRifleM1GarandOldGlory
+  category: Weapons
+  cost: 6
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGunsBig
+    - !type:CharacterJobRequirement
+      jobs:
+       - EnclaveRemnant
+  items:
+    - N14WeaponRifleM1GarandOldGlory

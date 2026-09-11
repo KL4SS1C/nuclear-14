@@ -1,0 +1,74 @@
+- type: entity
+  name: Enclave Eyebot
+  id: NWMobPetEyebotEnclave
+  parent: N14MobPetEyebot
+  description: A standard pre-war military Eyebot re-chassied in Enclave black, its optical sensor glowing green. A small piece of the old world reclaimed in service to the Enclave.
+  components:
+  - type: NpcFactionMember
+    factions:
+    - EnclaveRemnants
+  - type: GhostRole
+    name: ghost-role-information-misfits-pet-eyebot-enclave-name
+    description: ghost-role-information-misfits-pet-eyebot-enclave-description
+    rules: ghost-role-component-default-rules
+    makeSentient: false
+    allowMovement: true
+  - type: GhostRoleJob
+    job: EnclaveEyebot
+  - type: Sprite
+    sprite: _Misfits/Mobs/Pets/eyebot_enclave.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: icon
+    - state: shadow_eyebot
+
+- type: entity
+  name: Enclave Cyberdog
+  id: NWMobPetDogEnclave
+  parent: N14MobPetDog
+  description: A butchered but overall not-too-rusted cybernetic dog, its chassis re-finished in Enclave olive. A loyal killing machine, and at least it's immune to radiation.
+  components:
+  - type: RandomMetadata
+    nameSegments: [names_N14pet_dog]
+  - type: NpcFactionMember
+    factions:
+    - EnclaveRemnants
+  - type: GhostRole
+    name: ghost-role-information-misfits-pet-dog-enclave-name
+    description: ghost-role-information-misfits-pet-dog-enclave-description
+    rules: ghost-role-component-default-rules
+    makeSentient: false
+    allowMovement: true
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: dog
+      sprite: _Misfits/Mobs/Pets/dog_enclave.rsi
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: dog
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      80: Critical
+      160: Dead
+  - type: LanguageKnowledge
+    speaks:
+    - N14Dog
+    - N14Robot
+    understands:
+    - N14Dog
+    - N14Insect
+    - English
+    - Chinese
+    - Latin
+    - Tribal
+    - N14Robot
+    - N14BrotherBeep
+    - Sign

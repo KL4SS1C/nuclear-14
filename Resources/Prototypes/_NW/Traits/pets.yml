@@ -1,0 +1,25 @@
+- type: trait
+  id: NWPetEyebotEnclave
+  category: PetsMedium
+  points: -6
+  requirements:
+  - !type:CharacterJobRequirement
+    jobs:
+    - EnclaveRemnant
+  functions:
+  - !type:TraitSpawnEntity
+    prototypes:
+    - NWPetSpawnerEyebotEnclave
+
+- type: trait
+  id: NWPetDogEnclave
+  category: PetsMedium
+  points: -6
+  requirements:
+  - !type:CharacterJobRequirement
+    jobs:
+    - EnclaveRemnant
+  functions:
+  - !type:TraitSpawnEntity
+    prototypes:
+    - NWPetSpawnerDogEnclave

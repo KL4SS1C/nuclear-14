@@ -1,0 +1,24 @@
+- type: entity
+  parent: MisfitsPetSpawnerEyebot
+  id: NWPetSpawnerEyebotEnclave
+  name: Enclave eyebot companion spawner
+  components:
+  - type: GhostRole
+    name: ghost-role-information-misfits-pet-eyebot-enclave-name
+    description: ghost-role-information-misfits-pet-eyebot-enclave-description
+    rules: ghost-role-component-default-rules
+  - type: GhostRoleMobSpawner
+    prototype: NWMobPetEyebotEnclave
+
+# Enclave Cyberdog companion, purchasable only by Enclave scientist roles.
+- type: entity
+  parent: MisfitsPetSpawnerBase
+  id: NWPetSpawnerDogEnclave
+  name: Enclave cyberdog companion spawner
+  components:
+  - type: GhostRole
+    name: ghost-role-information-misfits-pet-dog-enclave-name
+    description: ghost-role-information-misfits-pet-dog-enclave-description
+    rules: ghost-role-component-default-rules
+  - type: GhostRoleMobSpawner
+    prototype: NWMobPetDogEnclave
