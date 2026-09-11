@@ -1,0 +1,8 @@
+- type: entity
+  parent: N14ClothingBackpackNCR
+  id: NWClothingBackpackRucksackEnclave
+  name: Enclave rucksack
+  description: Enclave field rucksack for longer patrols or surving in the wastes.
+  components:
+  - type: Sprite
+    sprite: _NW\Clothing\Back\Backpacks\enclaverucksack.rsi
