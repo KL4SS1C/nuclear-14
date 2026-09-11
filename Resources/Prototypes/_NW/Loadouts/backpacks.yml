@@ -1,0 +1,17 @@
+- type: loadout
+  id: NWClothingBackpackRucksackEnclave
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  customName: false
+  customDescription: false
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - EnclaveRemnant
+    - !type:CharacterItemGroupRequirement
+      group: N14LodaoutBags
+  items:
+    - NWClothingBackpackRucksackEnclave
+  functions:
+  - !type:LoadoutFiledStorage
