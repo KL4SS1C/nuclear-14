@@ -1,5 +1,5 @@
 - type: loadout
-  id: N14WeaponRifleM1GarandOldGlory
+  id: NWWeaponRifleM1GarandNewGlory
   category: Weapons
   cost: 6
   requirements:
@@ -9,4 +9,16 @@
       jobs:
        - EnclaveRemnant
   items:
-    - N14WeaponRifleM1GarandOldGlory
+    - NWWeaponRifleM1GarandNewGlory
+- type: loadout
+  id: NWWeaponPistolEnclaveRemnants10mm
+  category: Weapons
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterJobRequirement
+      jobs:
+      - EnclaveRemnant
+  items:
+    - NWWeaponPistolEnclaveRemnants10mm

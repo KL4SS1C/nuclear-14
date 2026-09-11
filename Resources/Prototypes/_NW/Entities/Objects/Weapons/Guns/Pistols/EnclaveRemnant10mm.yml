@@ -1,0 +1,39 @@
+- type: entity
+  name: Enclave Remnant 10mm compact
+  parent: N14BaseWeaponPistol
+  id: NWWeaponPistolEnclaveRemnants10mm
+  description: A customized Colt N99 Compact pistol, used by Enclave remnants.
+  components:
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Sprite
+    sprite: _NW/Objects/Weapons/Guns/Pistols/EnclaveRemnantN99.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    sprite: _NW/Objects/Weapons/Guns/Pistols/EnclaveRemnantN99.rsi
+  - type: Gun
+    fireRate: 4
+    soundGunshot:
+      collection: N14PistolSpyGunshot
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: N14MagazinePistol10mm
+        whitelist:
+          tags:
+            - N14MagazinePistol10mm
+      gun_chamber:
+        name: Chamber
+        startingItem: N14CartridgePistol10
+        priority: 1
+        whitelist:
+          tags:
+            - N14CartridgePistol10
+  - type: StaticPrice
+    price: 120

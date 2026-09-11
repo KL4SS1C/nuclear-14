@@ -1,0 +1,21 @@
+- type: entity
+  name: New Glory
+  parent: N14WeaponRifle308Battle
+  id: NWWeaponRifleM1GarandNewGlory
+  description: An M1 Garand with an old Enclave flag tied in the stock. "Remember Adamms" is scratched in the reciever.
+  components:
+  - type: Clothing
+    sprite: _Nuclear14/Objects/Weapons/Guns/Snipers/hunting.rsi # #Misfits Tweak: hunting rifle RSI back-slot placeholder, same as base Garand
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Sprite
+    sprite: _Nuclear14/Objects/Weapons/Guns/Rifles/oldglory.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: StaticPrice
+    price: 900
