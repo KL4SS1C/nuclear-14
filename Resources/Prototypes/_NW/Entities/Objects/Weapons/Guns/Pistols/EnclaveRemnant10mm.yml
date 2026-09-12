@@ -1,5 +1,5 @@
 - type: entity
-  name: Enclave Remnant 10mm compact
+  name: Enclave 10mm compact
   parent: N14BaseWeaponPistol
   id: NWWeaponPistolEnclaveRemnants10mm
   description: A customized Colt N99 Compact pistol, used by Enclave remnants.
