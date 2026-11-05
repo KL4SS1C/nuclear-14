@@ -1,0 +1,7 @@
+C:\Users\minib\Desktop\Fork to do\nuclear-14\Content.Server\_NW\Vehicles\NWVehicleSystem.Cabin.cs(77,38): error CS1503: Argumento 1: no se puede convertir de 'string' a 'Robust.Shared.Utility.ResPath' [C:\Users\minib\Desktop\Fork to do\nuclear-14\Content.Server\Content.Server.csproj]
+
+ERROR al compilar.
+    9290 Advertencia(s)
+    1 Errores
+
+Tiempo transcurrido 00:00:23.56

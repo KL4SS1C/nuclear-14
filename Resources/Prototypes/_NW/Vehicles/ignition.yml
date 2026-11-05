@@ -1,0 +1,12 @@
+- type: entity
+  parent: BaseItem
+  id: NWvehicleIgnitionKey
+  name: vehicle ignition key
+  description: An ignition key cut for one vehicle. Match the serial on the key to the vehicle. Use the ignition key action from the driver seat to insert or remove it while the engine is off.
+  components:
+  - type: NWVehicleIgnitionKey
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: _NW/Vehicles/key.rsi
+    state: key

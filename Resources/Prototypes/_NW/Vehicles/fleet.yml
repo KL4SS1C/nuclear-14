@@ -1,0 +1,212 @@
+- type: entity
+  id: NWvehicleHumveeEnclave
+  parent: NWvehicleHumvee
+  name: Enclave Humvee
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/enclave_humvee.rsi
+    layers:
+    - state: humvee_base
+    - state: wheels_0
+      map: [nw-humvee-wheels]
+    - state: humveehatch_0
+    - state: overlight_off
+      map:
+      - nw-overlights
+  - type: NWGroundVehicle
+    wreckPrototype: NWvehicleHumveeEnclaveWreck
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/enclave_humvee.yml
+- type: entity
+  id: NWvehicleHumveeEnclaveWreck
+  parent: NWvehicleHumveeWreck
+  name: wrecked Enclave Humvee chassis
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/enclave_humvee.rsi
+    drawdepth: Objects
+    noRot: false
+    layers:
+    - state: humvee_base
+    - state: wheels_1
+    - state: damaged_frame
+- type: entity
+  id: NWvehicleSPPVan
+  parent: NWvehicleVan
+  name: Luxury Asociates limousine
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PolygonShape
+          vertices:
+          - "-0.86,-1.47"
+          - "0.86,-1.47"
+          - "0.86,1.47"
+          - "-0.86,1.47"
+        density: 106.616
+        hard: true
+        mask: [LargeMobMask, BulletImpassable]
+        layer: [LargeMobLayer, Impassable]
+  - type: Sprite
+    sprite: _NW/Vehicles/sppvan.rsi
+    layers:
+    - state: sppvan_base
+    - state: wheels_0
+  - type: NWVehicle
+    seatCount: 6
+  - type: NWGroundVehicle
+    wreckPrototype: NWvehicleSPPVanWreck
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/spp_van.yml
+    entryPoints:
+    - 2.5,0.9
+    - 2.5,-0.2
+    - 0.35,0.25
+  description: An SPP van fitted for Luxury Asociates, with a chauffeur compartment and a four-seat passenger lounge.
+- type: entity
+  id: NWvehicleSPPVanWreck
+  parent: NWvehicleVanWreck
+  name: wrecked SPP van chassis
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PolygonShape
+          vertices:
+          - "-0.86,-1.47"
+          - "0.86,-1.47"
+          - "0.86,1.47"
+          - "-0.86,1.47"
+        density: 106.616
+        hard: true
+        mask: [LargeMobMask, BulletImpassable]
+        layer: [LargeMobLayer, Impassable]
+  - type: Sprite
+    sprite: _NW/Vehicles/sppvan.rsi
+    drawdepth: Objects
+    noRot: false
+    layers:
+    - state: sppvan_base
+    - state: wheels_1
+    - state: damaged_frame
+- type: entity
+  id: NWvehiclePizzaVan
+  parent: NWvehicleVan
+  name: pizza van
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PolygonShape
+          vertices:
+          - "-0.5,-0.97"
+          - "0.5,-0.97"
+          - "0.5,0.97"
+          - "-0.5,0.97"
+        density: 277.905
+        hard: true
+        mask: [LargeMobMask, BulletImpassable]
+        layer: [LargeMobLayer, Impassable]
+  - type: Sprite
+    sprite: _NW/Vehicles/pizza_van.rsi
+    layers:
+    - state: van_base
+    - state: wheels_0
+  - type: NWVehicle
+    seatCount: 4
+  - type: NWGroundVehicle
+    wreckPrototype: NWvehiclePizzaVanWreck
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/pizza_van.yml
+    entryPoints:
+    - 0.4,1.65
+    - 0.55,0.43
+    - -0.75,1.2
+  description: A 4-seat pizza van with a walkable cabin.
+- type: entity
+  id: NWvehiclePizzaVanWreck
+  parent: NWvehicleVanWreck
+  name: wrecked pizza van chassis
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PolygonShape
+          vertices:
+          - "-0.5,-0.97"
+          - "0.5,-0.97"
+          - "0.5,0.97"
+          - "-0.5,0.97"
+        density: 277.905
+        hard: true
+        mask: [LargeMobMask, BulletImpassable]
+        layer: [LargeMobLayer, Impassable]
+  - type: Sprite
+    sprite: _NW/Vehicles/pizza_van.rsi
+    drawdepth: Objects
+    noRot: false
+    layers:
+    - state: van_base
+    - state: wheels_1
+    - state: damaged_frame
+- type: entity
+  id: NWvehicleBoxVan
+  parent: NWvehicleVan
+  name: box van
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PolygonShape
+          vertices:
+          - "-0.5,-0.97"
+          - "0.5,-0.97"
+          - "0.5,0.97"
+          - "-0.5,0.97"
+        density: 277.905
+        hard: true
+        mask: [LargeMobMask, BulletImpassable]
+        layer: [LargeMobLayer, Impassable]
+  - type: Sprite
+    sprite: _NW/Vehicles/box_van.rsi
+    layers:
+    - state: van_base
+    - state: wheels_0
+  - type: NWVehicle
+    seatCount: 2
+  - type: NWGroundVehicle
+    wreckPrototype: NWvehicleBoxVanWreck
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/box_van.yml
+    entryPoints:
+    - -0.42,1.6
+    - -0.53,0.84
+    - -1.74,1.22
+  description: A 2-seat box van with a walkable cabin.
+- type: entity
+  id: NWvehicleBoxVanWreck
+  parent: NWvehicleVanWreck
+  name: wrecked box van chassis
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PolygonShape
+          vertices:
+          - "-0.5,-0.97"
+          - "0.5,-0.97"
+          - "0.5,0.97"
+          - "-0.5,0.97"
+        density: 277.905
+        hard: true
+        mask: [LargeMobMask, BulletImpassable]
+        layer: [LargeMobLayer, Impassable]
+  - type: Sprite
+    sprite: _NW/Vehicles/box_van.rsi
+    drawdepth: Objects
+    noRot: false
+    layers:
+    - state: van_base
+    - state: wheels_1
+    - state: damaged_frame

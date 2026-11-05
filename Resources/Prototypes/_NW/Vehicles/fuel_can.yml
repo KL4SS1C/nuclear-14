@@ -1,0 +1,29 @@
+- type: entity
+  id: NWvehicleFuelCan
+  parent: BaseItem
+  name: vehicle fuel can
+  description: A reusable 100-unit can of welding fuel. Use it on a parked vehicle to pour up to 25 units, or on a welding fuel tank to refill it.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chemistry/jug.rsi
+    state: jug
+  - type: Item
+    sprite: Objects/Specific/Chemistry/jug.rsi
+    size: Normal
+  - type: SolutionContainerManager
+    solutions:
+      fuel:
+        maxVol: 100
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 100
+  - type: RefillableSolution
+    solution: fuel
+  - type: DrainableSolution
+    solution: fuel
+  - type: ExaminableSolution
+    solution: fuel
+  - type: SolutionTransfer
+    transferAmount: 25
+    minTransferAmount: 25
+    maxTransferAmount: 25

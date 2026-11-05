@@ -1,0 +1,21 @@
+- type: entity
+  id: NWvehicleLoungeWineGlass
+  parent: DrinkBaseCup
+  name: wine glass
+  description: A stemmed glass from the Luxury Asociates lounge.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 25
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/wineglass.rsi
+    layers:
+    - state: icon_empty
+    - state: fill-1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 5
+    fillBaseName: fill-

@@ -1,0 +1,413 @@
+- type: entity
+  parent: BaseStructureDynamic
+  id: NWvehicleGroundBase
+  abstract: true
+  name: wasteland humvee
+  description: A four-seat ground vehicle. Stop the engine before boarding or handling cargo.
+  suffix: Ground vehicle
+  components:
+  - type: NWGroundVehicle
+    maxReverseSpeed: 4
+    braking: 12
+    rollingResistance: 12
+    turnDelay: 0.08
+    wreckPrototype: NWvehicleHumveeWreck
+    fragileBarriers:
+    - N14BarricadeRazorwire
+    breakableObstacles:
+    - N14SignStreetInterstate
+    - N14SignStreetInterstateShot
+    - N14SignStreetStop
+    - N14SignStreetNoturning
+    - N14SignStreetNoparking
+    - N14SignStreetSign
+    - N14SignStreetOneway
+    - N14SignStreetBusstop
+    - N14SignStreetRailcrossing
+    - N14SignStreetOnedirection
+    - N14SignStreetSpeedlimit
+    - N14SignStreetWarning
+    - N14SignStreetTurn
+    - N14SignStreetExit
+    - N14SignStreetNopedestrians
+    - N14SignStreetMerge
+    - N14SignStreetSnake
+    - N14FloraDesertTree1
+    - N14FloraDesertTree2
+    - N14FloraDesertTree3
+    - N14FloraDesertTree4
+    - N14FloraTreeBald
+    - N14FloraTreePine
+    - N14FloraTreeDead1
+    - N14FloraTreeDead2
+    - FloraTree01
+    - FloraTree02
+    - FloraTree03
+    - FloraTree04
+    - FloraTree05
+    - FloraTree06
+    - FloraTreeSnow01
+    - FloraTreeSnow02
+    - FloraTreeSnow03
+    - FloraTreeSnow04
+    - FloraTreeSnow05
+    - FloraTreeSnow06
+    - FloraTreeStump
+    - FloraTreeLarge01
+    - FloraTreeLarge02
+    - FloraTreeLarge03
+    - FloraTreeLarge04
+    - FloraTreeLarge05
+    - FloraTreeLarge06
+    - FloraTreeConifer01
+    - FloraTreeConifer02
+    - FloraTreeConifer03
+    - FloraTreeChristmas01
+    - FloraTreeChristmas02
+    - FloraTreeStumpConifer
+    maxIntegrity: 400
+    runOverMinimumSpeed: 2
+    runOverRadius: 0.9
+    runOverDamagePerSpeed: 5
+    runOverMaxDamage: 60
+    runOverCooldown: 1
+  - type: NWVehicle
+    startupDuration: 3
+    seatCount: 4
+    cargoCapacity: 2
+    thrustAcceleration: 6
+    reverseAcceleration: 4
+    maxSpeed: 10
+    fuelSolution: groundVehicleFuel
+    fuelUsePerSecond: 0.2
+    minimumStartFuel: 1
+    startAction: ActionNWVehicleStart
+    stopAction: ActionNWVehicleStop
+    windowTitleLocId: ground-vehicle-console
+    startupSound: null
+    engineLoopSound:
+      path: /Audio/_NW/Vehicles/vehicleengineidle.ogg
+      params:
+        loop: true
+        volume: -6
+        maxDistance: 15
+  - type: SolutionContainerManager
+    solutions:
+      groundVehicleFuel:
+        maxVol: 300
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 300
+  - type: RefillableSolution
+    solution: groundVehicleFuel
+  - type: ExaminableSolution
+    solution: groundVehicleFuel
+  - type: Physics
+    bodyType: Dynamic
+    canCollide: true
+    fixedRotation: true
+  - type: MZPhysics
+    bounciness: 0
+  - type: NWVehicleRepair
+    doAfterDelay: 5
+    fuelCost: 5
+    repairPerPass: 40
+  - type: Appearance
+  - type: InteractionOutline
+  - type: UserInterface
+    interfaces:
+      enum.NWVehicleUiKey.Key:
+        type: NWVehicleBoundUserInterface
+  - type: Sprite
+    sprite: _NW/Vehicles/humvee.rsi
+    drawdepth: Mobs
+    noRot: false
+    layers:
+    - state: humvee_base
+    - state: wheels_0
+    - state: humveehatch_0
+  - type: MovementSpeedModifier
+    acceleration: 0
+    friction: 5
+    baseWalkSpeed: 0
+    baseSprintSpeed: 0
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.9,-0.9,0.9,0.9
+        density: 166.4
+        hard: true
+        mask:
+        - LargeMobMask
+        - BulletImpassable
+        layer:
+        - LargeMobLayer
+        - Impassable
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger: !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts:
+        - Destruction
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/humvee.yml
+    entryPoints:
+    - 1.61,-2.15
+    - 2.47,-2.15
+    - 1.6,-1.35
+    - 2.41,-1.35
+- type: Tag
+  id: NWvehicleSnowplow
+- type: entity
+  parent: BaseItem
+  id: NWvehicleSnowplow
+  name: Humvee snowplow
+  description: A detachable front blade for clearing snow.
+  components:
+  - type: Item
+    size: Huge
+  - type: Sprite
+    sprite: _NW/Vehicles/humvee_parts.rsi
+    state: snowplow
+  - type: Tag
+    tags:
+    - NWvehicleSnowplow
+- type: entity
+  parent: NWvehicleGroundBase
+  id: NWvehicleHumvee
+  components:
+  - type: NWVehicle
+    hasOverlights: true
+  - type: PointLight
+    enabled: false
+    radius: 9
+    energy: 2
+    color: '#fff0d0'
+  - type: Sprite
+    sprite: _NW/Vehicles/humvee.rsi
+    layers:
+    - state: humvee_base
+    - state: wheels_0
+      map: [nw-humvee-wheels]
+    - state: humveehatch_0
+    - state: overlight_off
+      map:
+      - nw-overlights
+  - type: ItemSlots
+    slots:
+      nw_plow:
+        name: nw-vehicle-plow-slot
+        ejectVerbText: nw-vehicle-remove-plow
+        insertVerbText: nw-vehicle-install-plow
+        ejectOnBreak: true
+        whitelist:
+          tags:
+          - NWvehicleSnowplow
+  - type: ItemMapper
+    containerWhitelist:
+    - nw_plow
+    mapLayers:
+      snowplow_0:
+        whitelist:
+          tags:
+          - NWvehicleSnowplow
+- type: entity
+  parent: NWvehicleHumvee
+  id: NWvehicleHumveeM60
+  name: wasteland Humvee with mounted M60
+  description: A Humvee with four cabin seats and a fifth station at the roof-mounted M60.
+  components:
+  - type: NWVehicle
+    seatCount: 5
+    gunnerSeat: 4
+  - type: Sprite
+    sprite: _NW/Vehicles/humvee.rsi
+    layers:
+    - state: humvee_base
+    - state: wheels_0
+      map: [nw-humvee-wheels]
+    - state: humveeturret_0
+    - state: humveecannon_0
+    - state: overlight_off
+      map:
+      - nw-overlights
+  - type: Gun
+    minAngle: 1
+    maxAngle: 10
+    angleIncrease: 4
+    angleDecay: 16
+    fireRate: 4
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      collection: N14AutoRifleGunshot
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      nw_plow:
+        name: nw-vehicle-plow-slot
+        ejectVerbText: nw-vehicle-remove-plow
+        insertVerbText: nw-vehicle-install-plow
+        ejectOnBreak: true
+        whitelist:
+          tags:
+          - NWvehicleSnowplow
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine308M60Box
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - Magazine308M60Box
+      gun_chamber:
+        name: Chamber
+        startingItem: N14Cartridge308Rifle
+        priority: 1
+        whitelist:
+          tags:
+          - N14Cartridge308Rifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot {}
+      gun_chamber: !type:ContainerSlot {}
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/humvee_m60.yml
+- type: entity
+  parent: NWvehicleGroundBase
+  id: NWvehicleVan
+  name: wasteland cargo van
+  description: An eight-seat cargo van with a walkable interior. Stop the engine before boarding or loading.
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PolygonShape
+          vertices:
+          - "-0.7,-1.45"
+          - "0.7,-1.45"
+          - "0.7,1.45"
+          - "-0.7,1.45"
+        density: 132.792
+        hard: true
+        mask: [LargeMobMask, BulletImpassable]
+        layer: [LargeMobLayer, Impassable]
+  - type: NWGroundVehicle
+    maxReverseSpeed: 2
+    wreckPrototype: NWvehicleVanWreck
+    maxIntegrity: 300
+  - type: NWVehicle
+    seatCount: 8
+    cargoCapacity: 4
+    maxSpeed: 8
+    thrustAcceleration: 5
+  - type: Sprite
+    sprite: _NW/Vehicles/van.rsi
+    layers:
+    - state: van_base
+    - state: wheels_0
+    - state: passenger_compartment_0
+  - type: Destructible
+    thresholds:
+    - trigger: !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts:
+        - Destruction
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/van.yml
+    entryPoints:
+    - 3.5,-0.34
+    - 3.25,-1
+    - 0.25,-1
+- type: entity
+  parent: NWvehicleHumvee
+  id: N14GroundVehicleHumvee
+  categories:
+  - HideSpawnMenu
+- type: entity
+  parent: NWvehicleVan
+  id: N14GroundVehicleVan
+  categories:
+  - HideSpawnMenu
+- type: entity
+  id: NWvehicleWreckBase
+  abstract: true
+  components:
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+    fixedRotation: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.9,-0.9,0.9,0.9
+        density: 166.4
+        hard: true
+        mask:
+        - LargeMobMask
+        - BulletImpassable
+        layer:
+        - LargeMobLayer
+        - Impassable
+- type: entity
+  parent: NWvehicleWreckBase
+  id: NWvehicleHumveeWreck
+  name: wrecked humvee chassis
+  description: A twisted frame resting on ruined wheels.
+  components:
+  - type: Clickable
+  - type: Sprite
+    sprite: _NW/Vehicles/humvee.rsi
+    drawdepth: Objects
+    noRot: false
+    layers:
+    - state: humvee_base
+    - state: wheels_1
+    - state: damaged_frame
+- type: entity
+  parent: NWvehicleWreckBase
+  id: NWvehicleVanWreck
+  name: wrecked van chassis
+  description: A twisted frame resting on ruined wheels.
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PolygonShape
+          vertices:
+          - "-0.7,-1.45"
+          - "0.7,-1.45"
+          - "0.7,1.45"
+          - "-0.7,1.45"
+        density: 132.792
+        hard: true
+        mask: [LargeMobMask, BulletImpassable]
+        layer: [LargeMobLayer, Impassable]
+  - type: Clickable
+  - type: Sprite
+    sprite: _NW/Vehicles/van.rsi
+    drawdepth: Objects
+    noRot: false
+    layers:
+    - state: van_base
+    - state: wheels_1
+    - state: damaged_frame

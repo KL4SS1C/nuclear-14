@@ -182,7 +182,9 @@ public sealed partial class GunSystem : SharedGunSystem
         }
         //if(Inputting really fast ignore)
         // Define target coordinates relative to gun entity, so that network latency on moving grids doesn't fuck up the target location.
-        var coordinates = _xform.ToCoordinates(entity, mousePos);
+        var coordinateOwner = HasComp<Content.Shared._NW.Vehicles.NWVehicleComponent>(gunUid) ? gunUid : entity;
+        if (Transform(coordinateOwner).MapID != mousePos.MapId) return;
+        var coordinates = _xform.ToCoordinates(coordinateOwner, mousePos);
 
         NetEntity? target = null;
         if (_state.CurrentState is GameplayStateBase screen)

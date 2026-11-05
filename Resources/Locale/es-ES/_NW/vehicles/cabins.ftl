@@ -1,0 +1,11 @@
+nw-cabin-enter = Enter vehicle
+nw-cabin-stop-first = Turn off the engine and wait for the vehicle to stop before using the door.
+nw-cabin-unbuckle-first = Unbuckle before leaving the cabin.
+nw-cabin-no-nesting = You cannot bring another vehicle into this cabin.
+nw-cabin-load-failed = The cabin could not be loaded. Check the server log.
+nw-cabin-low-gear = Low gear
+nw-cabin-high-gear = High gear
+nw-cabin-lights-on = Lights on.
+nw-cabin-lights-off = Lights off.
+nw-cabin-ghost-enter = Enter vehicle (ghost)
+nw-cabin-ghost-exit = Exit vehicle (ghost)

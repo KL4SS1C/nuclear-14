@@ -1,0 +1,89 @@
+- type: entity
+  id: ActionNWVehicleStart
+  name: ground-vehicle-start
+  description: ground-vehicle-start-description
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    useDelay: 1
+    icon:
+      sprite: _NW/Vehicles/key.rsi
+      state: key
+    event: !type:NWVehicleStartActionEvent {}
+- type: entity
+  id: ActionNWVehicleStop
+  name: ground-vehicle-stop
+  description: ground-vehicle-stop-description
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    useDelay: 1
+    icon:
+      sprite: _NW/Vehicles/key.rsi
+      state: key
+    event: !type:NWVehicleStopActionEvent {}
+- type: entity
+  id: ActionNWVehicleCabinView
+  name: Interior / exterior view
+  description: Switch camera views. Your body remains inside the cabin.
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    useDelay: 1
+    icon:
+      sprite: _NW/Vehicles/key.rsi
+      state: key
+    event: !type:NWVehicleCabinViewActionEvent {}
+- type: entity
+  id: ActionNWVehicleCabinGear
+  name: Change gear
+  description: Switch between low and high gear.
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    useDelay: 1
+    icon:
+      sprite: _NW/Vehicles/key.rsi
+      state: key
+    event: !type:NWVehicleCabinGearActionEvent {}
+- type: entity
+  id: ActionNWVehicleCabinLights
+  name: Toggle lights
+  description: Turn the Overlights on or off.
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    useDelay: 1
+    icon:
+      sprite: _NW/Vehicles/key.rsi
+      state: key
+    event: !type:NWVehicleCabinLightsActionEvent {}
+- type: entity
+  id: ActionNWVehicleIgnition
+  name: Insert / remove ignition key
+  description: With the engine off, insert the key from your active hand or take the key already in the ignition.
+  categories: [HideSpawnMenu]
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    useDelay: 1
+    icon:
+      sprite: _NW/Vehicles/key.rsi
+      state: key
+    event: !type:NWVehicleIgnitionActionEvent {}

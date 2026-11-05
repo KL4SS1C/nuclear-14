@@ -188,6 +188,19 @@ public abstract partial class SharedGunSystem : EntitySystem
         gunEntity = default;
         gunComp = null;
 
+        if (TryComp<BuckleComponent>(entity, out var buckle) && buckle.BuckledTo is { } seat)
+        {
+            var mount = TryComp<Content.Shared._NW.Vehicles.NWVehicleCabinSeatComponent>(seat, out var cabinSeat)
+                ? cabinSeat.Exterior ?? seat : seat;
+            if (TryComp<Content.Shared._NW.Vehicles.NWVehicleComponent>(mount, out var vehicle) &&
+                vehicle.Gunner == entity && TryComp(mount, out gunComp) &&
+                (cabinSeat == null || TryComp<Content.Shared._NW.Vehicles.NWVehicleCabinViewerComponent>(entity, out var viewer) && viewer.Outside))
+            {
+                gunEntity = mount;
+                return true;
+            }
+        }
+
         // A mech pilot may fire either a selected mech weapon or a gun held in
         // the pilot's modified hands. Keep the pilot as the lookup entity so
         // the latter is not lost when the shot is relayed through the mech.
@@ -303,6 +316,14 @@ public abstract partial class SharedGunSystem : EntitySystem
         if (toCoordinates == null)
             return null;
 
+        // Interior gunners aim on the exterior map. Do not consume ammunition for an inside-map target
+        // or continue an automatic burst after the gunner leaves the station.
+        if (TryComp<Content.Shared._NW.Vehicles.NWVehicleComponent>(gunUid, out var mountedVehicle) &&
+            (mountedVehicle.Gunner != user ||
+             !TryGetGun(user, out var currentMount, out _) || currentMount != gunUid ||
+             _xform.ToMapCoordinates(toCoordinates.Value).MapId != Transform(gunUid).MapID))
+            return null;
+
         var curTime = Timing.CurTime;
 
         // check if anything wants to prevent shooting
@@ -389,7 +410,18 @@ public abstract partial class SharedGunSystem : EntitySystem
         if (!Timing.IsFirstTimePredicted)
             return null;
 
-        var fromCoordinates = Transform(user).Coordinates;
+        var fromCoordinates = HasComp<Content.Shared._NW.Vehicles.NWVehicleComponent>(gunUid)
+            ? Transform(gunUid).Coordinates : Transform(user).Coordinates;
+
+        if (HasComp<Content.Shared._NW.Vehicles.NWVehicleComponent>(gunUid))
+        {
+            var direction = _xform.ToMapCoordinates(toCoordinates.Value).Position - _xform.ToMapCoordinates(fromCoordinates).Position;
+            if (direction.LengthSquared() > 0.0001f)
+            {
+                var aim = new Content.Shared._NW.Vehicles.NWVehicleTurretAimEvent(direction.ToWorldAngle());
+                RaiseLocalEvent(gunUid, ref aim);
+            }
+        }
 
         // #Misfits Add: apply per-gun origin offset (e.g. Assaultron head beam)
         if (gun.ShootOffset != Vector2.Zero)

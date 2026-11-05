@@ -1,0 +1,54 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      Title=""
+                      Resizable="True"
+                      SetSize="460 660"
+                      MinSize="420 560">
+    <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True" Margin="10">
+        <PanelContainer StyleClasses="Inset" HorizontalExpand="True" Margin="0 0 0 8">
+            <BoxContainer Orientation="Vertical" Margin="10 8">
+                <Label Name="ConsoleHeading" Text="{Loc 'ground-vehicle-console'}" StyleClasses="LabelHeading"/>
+                <BoxContainer Orientation="Horizontal" HorizontalExpand="True" Margin="0 4 0 6">
+                    <Label Name="StatusLabel" HorizontalExpand="True" StyleClasses="StatusFieldTitle"/>
+                </BoxContainer>
+                <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                    <Label Text="{Loc 'nw-vehicle-window-fuel'}" MinWidth="72" VerticalAlignment="Center"/>
+                    <ProgressBar Name="FuelBar" MinValue="0" MaxValue="1" HorizontalExpand="True" SetHeight="24">
+                        <Label Name="FuelText" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </ProgressBar>
+                </BoxContainer>
+                <BoxContainer Orientation="Horizontal" HorizontalExpand="True" Margin="0 5 0 0">
+                    <Label Text="{Loc 'nw-vehicle-window-structure'}" MinWidth="72" VerticalAlignment="Center"/>
+                    <ProgressBar Name="StructureBar" MinValue="0" MaxValue="1" HorizontalExpand="True" SetHeight="24">
+                        <Label Name="StructureText" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </ProgressBar>
+                </BoxContainer>
+            </BoxContainer>
+        </PanelContainer>
+
+        <BoxContainer Orientation="Horizontal" Margin="0 0 0 8">
+            <Button Name="LowGearButton" Text="{Loc 'nw-vehicle-gear-low'}" HorizontalExpand="True"/>
+            <Button Name="HighGearButton" Text="{Loc 'nw-vehicle-gear-high'}" HorizontalExpand="True"/>
+            <Button Name="LightsButton" HorizontalExpand="True"/>
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" Margin="2 2 0 5">
+            <Label Name="CrewHeading" Text="{Loc 'ground-vehicle-crew'}" StyleClasses="LabelHeading" HorizontalExpand="True"/>
+            <Label Name="OccupancyLabel" StyleClasses="StatusFieldTitle"/>
+        </BoxContainer>
+        <BoxContainer Name="FlightCrewList" Orientation="Vertical" HorizontalExpand="True"/>
+
+        <PanelContainer StyleClasses="LowDivider" Margin="0 5 0 8"/>
+        <Label Text="{Loc 'nw-vehicle-window-passengers'}" StyleClasses="LabelHeading" Margin="2 0 0 5"/>
+        <ScrollContainer VerticalExpand="True" HorizontalExpand="True">
+            <BoxContainer Name="PassengerList" Orientation="Vertical" HorizontalExpand="True"/>
+        </ScrollContainer>
+
+        <PanelContainer StyleClasses="LowDivider" Margin="0 5 0 8"/>
+        <BoxContainer Orientation="Horizontal" Margin="2 0 0 5">
+            <Label Text="{Loc 'nw-vehicle-window-cargo'}" StyleClasses="LabelHeading" HorizontalExpand="True"/>
+            <Label Name="CargoLabel" StyleClasses="StatusFieldTitle"/>
+        </BoxContainer>
+        <BoxContainer Name="CargoList" Orientation="Vertical" HorizontalExpand="True"/>
+        <Button Name="LoadCargoButton" Text="{Loc 'nw-vehicle-cargo-load'}" Margin="0 4 0 0"/>
+    </BoxContainer>
+</controls:FancyWindow>

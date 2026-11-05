@@ -1,0 +1,1250 @@
+- type: entity
+  id: NWvehicleCabinVehicleHumveeChassisEnclave
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/humvee_chassis.rsi
+    drawdepth: FloorTiles
+    state: humvee_chassis_enclave
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleHumveeExitDoorEnclave
+  name: vehicle door
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/general_humvee.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: exit_door_Enclave
+      map:
+      - roof
+    color: '#FFFFFF59'
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Clickable
+  - type: InteractionOutline
+  - type: NWVehicleCabinExit
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleHumveeExitDoorDirectionalEnclave
+  name: vehicle door
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/general_humvee.rsi
+    drawdepth: Items
+    state: exit_door1_Enclave
+  - type: Clickable
+  - type: InteractionOutline
+  - type: NWVehicleCabinExit
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinCMSeatPassenger
+  name: passenger seat
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/vehicle_seats.rsi
+    noRot: true
+    state: base
+  - type: Strap
+    position: Stand
+    buckleOffset: 0,-0.05
+    modifyBuckleDrawDepth: false
+  - type: NWVehicleCabinSeat
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinRMCSeatArmoredDriver
+  name: driver seat
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/general.rsi
+    noRot: true
+    state: armor_chair
+  - type: Strap
+    position: Stand
+    buckleOffset: 0,-0.05
+    modifyBuckleDrawDepth: false
+  - type: NWVehicleCabinSeat
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleExitArea
+  name: vehicle door
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/general_humvee.rsi
+    state: exit_door
+    drawdepth: Objects
+  - type: NWVehicleCabinExit
+  - type: Clickable
+  - type: InteractionOutline
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleSPPVanChassis
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/sppvan_chassis.rsi
+    drawdepth: FloorTiles
+    state: sppvan_chassis
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleSPPVanExteriorDoorUnique
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/sppvan.rsi
+    drawdepth: Walls
+    state: exterior_door_unique
+    color: '#FFFFFF59'
+  - type: Clickable
+  - type: InteractionOutline
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleSPPVanInteriorDoor
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/sppvan.rsi
+    drawdepth: Objects
+    layers:
+    - state: interior_door
+      map:
+      - roof
+    color: '#FFFFFF59'
+  - type: Clickable
+  - type: InteractionOutline
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleSPPVanViewportSimple
+  name: viewport
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/sppvan.rsi
+    drawdepth: Objects
+    state: viewport_simple
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Occluder
+    enabled: false
+  - type: NWVehicleCabinViewport
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleSPPVanViewportSimpleFront
+  name: viewport
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/sppvan.rsi
+    drawdepth: Objects
+    state: viewport_simple_front
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Occluder
+    enabled: false
+  - type: NWVehicleCabinViewport
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanBackground1
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: roof_1
+      map:
+      - roof
+    state: background_2
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanBackground3
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: roof_1
+      map:
+      - roof
+    state: background_3
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanExterior1
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    state: exterior_2
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanExterior3
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    state: exterior_3
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanExteriorDoor
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    state: exterior_door
+    color: '#FFFFFF59'
+  - type: Clickable
+  - type: InteractionOutline
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanFront1
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    state: front_1
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanFront3
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    state: front_3
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanFrontLeft2
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    state: front_2
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanFrontRoof1
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: front_roof_1
+      map:
+      - roof
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanFrontRoof2
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: front_roof_2
+      map:
+      - roof
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanInteriorDoor
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Walls
+    state: interior_door
+    color: '#FFFFFF59'
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: Clickable
+  - type: InteractionOutline
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanLeft1
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    state: back_1
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: Clickable
+  - type: InteractionOutline
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanLeft2
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    state: back_2
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: Clickable
+  - type: InteractionOutline
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanRight3
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    state: back_3
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanRoof2
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: roof_2
+      map:
+      - roof
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanRoof3
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: roof_3
+      map:
+      - roof
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanRoof4
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: roof_4
+      map:
+      - roof
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanRoof5
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: roof_5
+      map:
+      - roof
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehiclePizzaVanWindshieldBottom
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/pizza_van_interior.rsi
+    drawdepth: Overdoors
+    state: windshield_viewport_bottom
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanBack1
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    state: back_1
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: Clickable
+  - type: InteractionOutline
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanBackground2
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: roof_1
+      map:
+      - roof
+    state: background_2
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanBackground3
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: roof_1
+      map:
+      - roof
+    state: background_3
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanExterior1
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    state: exterior_2
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanExterior3
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    state: exterior_3
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanExteriorDoor
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    state: exterior_door
+    color: '#FFFFFF59'
+  - type: Clickable
+  - type: InteractionOutline
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanFront1
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    state: front_1
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanFront2
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    state: front_2
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanFront3
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    state: front_3
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanFrontRight2
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    state: back_2
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: Clickable
+  - type: InteractionOutline
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanFrontRoof1
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: front_roof_1
+      map:
+      - roof
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanFrontRoof2
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: front_roof_2
+      map:
+      - roof
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanInteriorDoor
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    state: interior_door
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: Clickable
+  - type: InteractionOutline
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanLeft1
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    state: back_1
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: Clickable
+  - type: InteractionOutline
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanLeft3
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    state: back_3
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanRoof2
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: roof_2
+      map:
+      - roof
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanRoof3
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: roof_3
+      map:
+      - roof
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanRoof4
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: roof_4
+      map:
+      - roof
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleCabinVehicleBoxVanRoof5
+  name: vehicle interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/box_van_interior.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: roof_5
+      map:
+      - roof
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+
+- type: entity
+  parent: NWvehicleCabinCMSeatPassenger
+  id: NWvehicleCabinLucuryLoungeSeat
+  name: upholstered lounge seat
+  description: A cushioned armchair facing the other side of the lounge.
+  categories: [HideSpawnMenu]
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/chairs.rsi
+    state: comfychair
+    noRot: true
+    drawdepth: Objects
+
+- type: entity
+  parent: NWvehicleCabinVehicleExitArea
+  id: NWvehicleCabinLucuryRearDoor
+  name: rear passenger door
+  categories: [HideSpawnMenu]
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/sppvan.rsi
+    state: interior_door
+    drawdepth: Objects
+
+- type: entity
+  id: NWvehicleCabinLucuryRug
+  name: red lounge rug
+  categories: [HideSpawnMenu]
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Furniture/rugs64x64.rsi
+    state: rug_red
+    drawdepth: FloorObjects
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
