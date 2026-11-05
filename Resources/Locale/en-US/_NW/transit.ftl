@@ -1,0 +1,12 @@
+nw-transit-unconfigured = This endpoint has no link ID.
+nw-transit-missing = The other end of this link is unavailable.
+nw-transit-ambiguous = More than two endpoints share this link ID.
+nw-transit-unbuckle = Unbuckle before using this passage.
+nw-transit-blocked-arrival = The landing is blocked or has no floor.
+nw-elevator-floor = Floor { $floor }
+nw-elevator-named = Floor { $floor } — { $name }
+nw-elevator-duplicate = This elevator has two stops configured as floor { $floor }.
+nw-elevator-alone = No other floor is available on this elevator.
+nw-elevator-changed = This destination has changed. Open the floor list again.
+nw-elevator-window-title = Select floor
+nw-elevator-close = Close

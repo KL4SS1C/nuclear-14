@@ -1,0 +1,62 @@
+- type: entity
+  abstract: true
+  id: NWTransitEndpoint
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Clickable
+  - type: InteractionOutline
+  - type: NWTransitLink
+
+- type: entity
+  parent: NWTransitEndpoint
+  id: NWTransitLadder
+  name: transit ladder
+  description: Climb to the other end of the passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladderss13.rsi
+    state: ladder_bottom
+  - type: NWTransitLink
+    delay: 2
+
+- type: entity
+  parent: NWTransitLadder
+  id: NWTransitHatch
+  name: ladder hatch
+  description: Climb down through the hatch.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladderss13.rsi
+    state: ladder_top
+
+- type: entity
+  parent: NWTransitEndpoint
+  id: NWTransitButton
+  name: transit button
+  description: Press to travel to the linked endpoint.
+  components:
+  - type: WallMount
+  - type: NWTransitLink
+    arrivalOffset: 0,-1
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: Structures/Wallmounts/switch.rsi
+    state: "on"
+
+- type: entity
+  id: NWTransitLadderTopBunkerOpen
+  parent: NWTransitHatch
+  name: open bunker entrance
+  description: Climb down into the bunker.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/laddersms13.rsi
+    state: bunker_open
+    noRot: true
+    offset: 0,0.25

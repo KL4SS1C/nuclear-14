@@ -1,0 +1,69 @@
+- type: entity
+  abstract: true
+  id: NWTransitTerminalBase
+  parent: NWTransitEndpoint
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: WallMount
+  - type: NWTransitLink
+    arrivalOffset: 0,-1
+  - type: NWElevatorStop
+  - type: UserInterface
+    interfaces:
+      enum.ListViewSelectorUiKey.Key:
+        type: NWElevatorBoundUserInterface
+- type: entity
+  id: NWTransitTerminalWallRusted
+  parent: NWTransitTerminalBase
+  name: elevator terminal
+  suffix: rusted wall
+  description: A transit terminal for selecting a destination.
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _Nuclear14/Structures/Machines/Terminals/terminal_wall_rusted.rsi
+    layers:
+    - state: computer
+    - state: screens
+- type: entity
+  id: NWTransitTerminalWall
+  parent: NWTransitTerminalBase
+  name: elevator terminal
+  suffix: wall
+  description: A transit terminal for selecting a destination.
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _Nuclear14/Structures/Machines/Terminals/terminal_wall.rsi
+    layers:
+    - state: computer
+    - state: screens
+- type: entity
+  id: NWTransitTerminalClassic
+  parent: NWTransitTerminalBase
+  name: elevator terminal
+  suffix: classic
+  description: A transit terminal for selecting a destination.
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _Nuclear14/Structures/Machines/Terminals/terminal_classic.rsi
+    layers:
+    - state: computer
+    - state: screens
+
+- type: entity
+  id: NWTransitElevatorSignalButton
+  parent: NWTransitTerminalBase
+  name: elevator call button
+  suffix: signal button
+  description: Press to select a floor.
+  placement:
+    mode: SnapgridCenter
+    snap: [Wallmount]
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: Structures/Wallmounts/switch.rsi
+    state: dead
