@@ -14,8 +14,6 @@ Nuclear 14 is the first Fallout fork for Space Station 14, utilizing:
 
 The theme and locations differ from classic F13, offering players a new experience. The codebase is licensed under AGPLv3, which allows for free use and development of the project.
 
-## Features of the Russian Version
-
 Nuclear Winter stills in development, and curently we are actively working in the map. It is a huge project.
 
 ## Links
