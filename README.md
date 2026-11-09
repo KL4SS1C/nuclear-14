@@ -1,8 +1,8 @@
 Here is the translation with the original Markdown formatting preserved:
 
-# Nuclear 14 / Nuclear Winter: Ashfall
+# Nuclear 14 / Nuclear Winter: The Ashfall
 
-**Nuclear Winter** is a english fork of **Misfits:Nuclear Wasteland**, and by that, directly another fork of **Nuclear 14**.
+**Nuclear Winter** is a english fork of **Misfits: Nuclear Wasteland**, and by that, directly another fork of **Nuclear 14**.
 
 ## About the Project
 
