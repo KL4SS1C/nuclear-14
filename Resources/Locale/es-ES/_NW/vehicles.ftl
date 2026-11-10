@@ -64,7 +64,7 @@ nw-vehicle-cargo-will-not-fit = That will not fit in the cargo bay. Crates have 
 ent-NWvehicleHumveeWreck = wrecked Humvee chassis
     .desc = A twisted frame resting on ruined wheels.
 
-ent-NWvehicleVanWreck = wrecked van chassis
+ent-NWvehicleVanWreck = wrecked truck chassis
     .desc = A twisted frame resting on ruined wheels.
 
 nw-vehicle-exit-blocked = There is no room to get out on this side.

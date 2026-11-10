@@ -289,8 +289,8 @@
 - type: entity
   parent: NWvehicleGroundBase
   id: NWvehicleVan
-  name: wasteland cargo van
-  description: An eight-seat cargo van with a walkable interior. Stop the engine before boarding or loading.
+  name: wasteland cargo truck
+  description: An eight-seat cargo truck with a walkable interior. Stop the engine before boarding or loading.
   components:
   - type: Fixtures
     fixtures:
@@ -386,7 +386,7 @@
 - type: entity
   parent: NWvehicleWreckBase
   id: NWvehicleVanWreck
-  name: wrecked van chassis
+  name: wrecked truck chassis
   description: A twisted frame resting on ruined wheels.
   components:
   - type: Fixtures
