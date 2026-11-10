@@ -1,0 +1,243 @@
+# NWLadders 1.0: native sprite variants, independent transit behavior.
+- type: entity
+  id: NWTransitLadderStyleBase
+  parent: NWTransitEndpoint
+  abstract: true
+  components:
+  - type: NWTransitLink
+    delay: 2
+  - type: Sprite
+    noRot: true
+- type: entity
+  id: NWTransitLadderTopMetal
+  parent: NWTransitLadderStyleBase
+  name: transit ladder
+  suffix: top, metal
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladder.rsi
+    layers:
+    - state: metal
+- type: entity
+  id: NWTransitLadderTopPaint1
+  parent: NWTransitLadderStyleBase
+  name: transit ladder
+  suffix: top, paint1
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladder.rsi
+    layers:
+    - state: metal
+    - state: paint_1
+- type: entity
+  id: NWTransitLadderTopPaint2
+  parent: NWTransitLadderStyleBase
+  name: transit ladder
+  suffix: top, paint2
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladder.rsi
+    layers:
+    - state: metal
+    - state: paint_2
+- type: entity
+  id: NWTransitLadderTopPaint3
+  parent: NWTransitLadderStyleBase
+  name: transit ladder
+  suffix: top, paint3
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladder.rsi
+    layers:
+    - state: metal
+    - state: paint_3
+- type: entity
+  id: NWTransitLadderTopRusted
+  parent: NWTransitLadderStyleBase
+  name: transit ladder
+  suffix: top, rusted
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladder.rsi
+    layers:
+    - state: metal
+    - state: rust
+- type: entity
+  id: NWTransitLadderTopDamaged
+  parent: NWTransitLadderStyleBase
+  name: transit ladder
+  suffix: top, damaged
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladder.rsi
+    layers:
+    - state: metal_damaged
+- type: entity
+  id: NWTransitLadderTopRope
+  parent: NWTransitLadderStyleBase
+  name: transit ladder
+  suffix: top, rope
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladder.rsi
+    layers:
+    - state: rope
+- type: entity
+  id: NWTransitLadderBottomMetal
+  parent: NWTransitLadderStyleBase
+  name: transit ladder
+  suffix: bottom, metal
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladder.rsi
+    layers:
+    - state: b_metal
+- type: entity
+  id: NWTransitLadderBottomPaint1
+  parent: NWTransitLadderStyleBase
+  name: transit ladder
+  suffix: bottom, paint1
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladder.rsi
+    layers:
+    - state: b_metal
+    - state: b_paint_1
+- type: entity
+  id: NWTransitLadderBottomPaint2
+  parent: NWTransitLadderStyleBase
+  name: transit ladder
+  suffix: bottom, paint2
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladder.rsi
+    layers:
+    - state: b_metal
+    - state: b_paint_2
+- type: entity
+  id: NWTransitLadderBottomPaint3
+  parent: NWTransitLadderStyleBase
+  name: transit ladder
+  suffix: bottom, paint3
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladder.rsi
+    layers:
+    - state: b_metal
+    - state: b_paint_3
+- type: entity
+  id: NWTransitLadderBottomRusted
+  parent: NWTransitLadderStyleBase
+  name: transit ladder
+  suffix: bottom, rusted
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladder.rsi
+    layers:
+    - state: b_metal
+    - state: b_rust
+- type: entity
+  id: NWTransitLadderBottomDamaged
+  parent: NWTransitLadderStyleBase
+  name: transit ladder
+  suffix: bottom, damaged
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladder.rsi
+    layers:
+    - state: b_metal_damaged
+- type: entity
+  id: NWTransitLadderBottomRope
+  parent: NWTransitLadderStyleBase
+  name: transit ladder
+  suffix: bottom, rope
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladder.rsi
+    layers:
+    - state: b_rope
+- type: entity
+  id: NWTransitLadderBottomRopeDamaged
+  parent: NWTransitLadderStyleBase
+  name: transit ladder
+  suffix: bottom, damaged rope
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/ladder.rsi
+    layers:
+    - state: b_rope_damaged
+- type: entity
+  id: NWTransitManholeOpen
+  parent: NWTransitLadderStyleBase
+  name: open manhole
+  suffix: manhole_open
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/laddersms13.rsi
+    layers:
+    - state: manhole_open
+    offset: 0,0.25
+- type: entity
+  id: NWTransitEnclaveOpen
+  parent: NWTransitLadderStyleBase
+  name: open Enclave entrance
+  suffix: enclave_open
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/laddersms13.rsi
+    layers:
+    - state: enclave_open
+    offset: 0,0.25
+- type: entity
+  id: NWTransitDasBunkerOpen
+  parent: NWTransitLadderStyleBase
+  name: open reinforced bunker entrance
+  suffix: dasbunker_open
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/laddersms13.rsi
+    layers:
+    - state: dasbunker_open
+    offset: 0,0.25
+- type: entity
+  id: NWTransitRopeUp
+  parent: NWTransitLadderStyleBase
+  name: rope ladder
+  suffix: rope
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/laddersms13.rsi
+    layers:
+    - state: rope
+    offset: 0,0.25
+- type: entity
+  id: NWTransitRopeDown
+  parent: NWTransitLadderStyleBase
+  name: rope passage
+  suffix: rope_down
+  description: Climb to the linked passage.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Misc/laddersms13.rsi
+    layers:
+    - state: rope_down
+    offset: 0,0.25

@@ -1,0 +1,91 @@
+# Frame and push button are layers of one interactive entity.
+- type: entity
+  id: NWTransitElevatorButtonGrey
+  parent: NWTransitTerminalBase
+  name: elevator call button
+  suffix: grey
+  description: Press to select a destination.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wallmount
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    layers:
+    - sprite: Structures/Wallmounts/switch_frame.rsi
+      state: grey
+    - sprite: Structures/Wallmounts/switch.rsi
+      state: dead
+- type: entity
+  id: NWTransitElevatorButtonExit
+  parent: NWTransitTerminalBase
+  name: elevator call button
+  suffix: exit
+  description: Press to select a destination.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wallmount
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    layers:
+    - sprite: Structures/Wallmounts/switch_frame.rsi
+      state: exit
+    - sprite: Structures/Wallmounts/switch.rsi
+      state: dead
+- type: entity
+  id: NWTransitElevatorButtonCaution
+  parent: NWTransitTerminalBase
+  name: elevator call button
+  suffix: caution
+  description: Press to select a destination.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wallmount
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    layers:
+    - sprite: Structures/Wallmounts/switch_frame.rsi
+      state: caution
+    - sprite: Structures/Wallmounts/switch.rsi
+      state: dead
+- type: entity
+  id: NWTransitElevatorButtonSecurity
+  parent: NWTransitTerminalBase
+  name: elevator call button
+  suffix: security
+  description: Press to select a destination.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wallmount
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    layers:
+    - sprite: Structures/Wallmounts/switch_frame.rsi
+      state: caution_security
+    - sprite: Structures/Wallmounts/switch.rsi
+      state: dead
+- type: entity
+  id: NWTransitElevatorButtonService
+  parent: NWTransitTerminalBase
+  name: elevator call button
+  suffix: service
+  description: Press to select a destination.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wallmount
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    layers:
+    - sprite: Structures/Wallmounts/switch_frame.rsi
+      state: janitor
+    - sprite: Structures/Wallmounts/switch.rsi
+      state: dead
