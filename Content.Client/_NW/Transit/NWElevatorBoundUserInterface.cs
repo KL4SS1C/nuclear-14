@@ -1,4 +1,5 @@
 using Content.Shared.ListViewSelector;
+using Content.Shared._NW.Transit;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
 
@@ -17,8 +18,19 @@ public sealed class NWElevatorBoundUserInterface : BoundUserInterface
         base.Open();
         _window = this.CreateWindow<NWElevatorWindow>();
         _window.FloorSelected += SelectFloor;
-        if (_floors != null)
+        // The UI component may already contain state before this window exists.
+        if (UiSystem.TryGetUiState<ListViewSelectorState>(Owner, UiKey, out var current))
+        {
+            _floors = current;
+            _window.SetFloors(current.Items);
+        }
+        else if (_floors != null)
+        {
             _window.SetFloors(_floors.Items);
+        }
+
+        // Rebuild from the loaded map, even when the initial state was missed.
+        SendMessage(new NWElevatorRefreshMessage());
     }
 
     protected override void UpdateState(BoundUserInterfaceState state)

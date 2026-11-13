@@ -12,6 +12,7 @@ public sealed partial class NWTransitSystem
         Subs.BuiEvents<NWElevatorStopComponent>(ListViewSelectorUiKey.Key, subs =>
         {
             subs.Event<ListViewItemSelectedMessage>(OnSelectFloor);
+            subs.Event<NWElevatorRefreshMessage>(OnRefreshFloors);
         });
     }
 
@@ -52,11 +53,29 @@ public sealed partial class NWTransitSystem
 
     private string StopId(EntityUid uid, int floor) => $"nw-stop-{GetNetEntity(uid)}-{floor}";
 
+    private void OnRefreshFloors(Entity<NWElevatorStopComponent> ent, ref NWElevatorRefreshMessage message)
+    {
+        if (!CanTravel(ent.Owner, message.Actor))
+            return;
+        PublishFloors(ent.Owner, message.Actor);
+    }
+
     private void ShowFloors(EntityUid source, EntityUid user)
+    {
+        if (PublishFloors(source, user))
+            _ui.OpenUi(source, ListViewSelectorUiKey.Key, user);
+    }
+
+    private bool PublishFloors(EntityUid source, EntityUid user)
     {
         var floors = GetFloors(source, user);
         if (floors == null)
-            return;
+        {
+            // Replace stale destinations; GetFloors also explains the configuration error.
+            _ui.SetUiState(source, ListViewSelectorUiKey.Key,
+                new ListViewSelectorState(new List<ListViewSelectorEntry>()));
+            return false;
+        }
         var entries = new List<ListViewSelectorEntry>();
         foreach (var (floor, uid) in floors)
         {
@@ -69,7 +88,7 @@ public sealed partial class NWTransitSystem
             entries.Add(new ListViewSelectorEntry(StopId(uid, floor), text));
         }
         _ui.SetUiState(source, ListViewSelectorUiKey.Key, new ListViewSelectorState(entries));
-        _ui.OpenUi(source, ListViewSelectorUiKey.Key, user);
+        return true;
     }
 
     private void OnSelectFloor(Entity<NWElevatorStopComponent> ent, ref ListViewItemSelectedMessage message)

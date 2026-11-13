@@ -1,10 +1,12 @@
 <controls:FancyWindow xmlns="https://spacestation14.io"
     xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
     Title="{Loc 'nw-elevator-window-title'}" Resizable="False"
-    MinSize="260 96" SetSize="280 116">
+    MinSize="260 96" SetSize="320 160">
     <BoxContainer Orientation="Vertical" Margin="8 6" SeparationOverride="6">
-        <ScrollContainer VerticalExpand="True" HScrollEnabled="False">
-            <BoxContainer Name="Floors" Orientation="Vertical" SeparationOverride="2"/>
+        <ScrollContainer MinHeight="60" VerticalExpand="True" HScrollEnabled="False">
+            <BoxContainer Name="Floors" Orientation="Vertical" HorizontalExpand="True" SeparationOverride="2">
+                <Label Text="Loading floors..."/>
+            </BoxContainer>
         </ScrollContainer>
         <Button Name="Dismiss" Text="{Loc 'nw-elevator-close'}" SetHeight="28"/>
     </BoxContainer>

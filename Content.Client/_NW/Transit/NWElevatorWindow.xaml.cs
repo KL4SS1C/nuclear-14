@@ -21,7 +21,12 @@ public sealed partial class NWElevatorWindow : FancyWindow
     public void SetFloors(List<ListViewSelectorEntry> items)
     {
         Floors.Children.Clear();
-        SetSize = new Vector2(280, 86 + 30 * Math.Clamp(items.Count, 1, 6));
+        SetSize = new Vector2(320, 120 + 30 * Math.Clamp(items.Count, 1, 6));
+        if (items.Count == 0)
+        {
+            Floors.AddChild(new Label { Text = "No available destinations." });
+            return;
+        }
         for (var i = 0; i < items.Count; i++)
         {
             var index = i;
