@@ -51,6 +51,11 @@ public sealed partial class ScalingViewport
         if (!_mzEntMan.TryGetComponent<MZMapComponent>(mapUid, out var zMap))
             return;
 
+        // NW floors need the same lowest-to-highest composition as CMU, even with grids.
+        if (_mzEntMan.HasComponent<Content.Shared._NW.ZLevels.NWZLevelMapComponent>(mapUid) &&
+            TryRenderNWZStack(mapUid, zMap, _eye))
+            return;
+
         var zSystem = _mzEntMan.System<MZSharedSystem>();
         var eye = _eye;
 

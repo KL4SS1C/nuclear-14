@@ -2,7 +2,10 @@
   id: Detroit
   mapName: 'Detroit'
   mapAuthor: 'NW Team'
-  mapPath: /Maps/_NW/REALdetroit.yml
+  mapPath: /Maps/_NW/ZLevels/DetroitGround.yml
+  mapsAbove:
+  - /Maps/_NW/ZLevels/EnclaveRooms.yml
+  - /Maps/_NW/ZLevels/EnclaveSuites.yml
   minPlayers: 0
   stations:
     Sunnyvale:

@@ -239,6 +239,8 @@ public sealed partial class MZSystem : MZSharedSystem
 
             if (netComp.ZLevels.TryGetValue(mapDepth - 1, out var belowUid) && belowUid is { } below)
                 zMapComp.MapBelow = below;
+
+            Dirty(mapUid, zMapComp);
         }
 
         Dirty(network, netComp);

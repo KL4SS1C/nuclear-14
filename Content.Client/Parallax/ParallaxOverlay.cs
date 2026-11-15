@@ -31,6 +31,10 @@ public sealed class ParallaxOverlay : Overlay
 
     protected override bool BeforeDraw(in OverlayDrawArgs args)
     {
+        // Upper Z passes must not paint a starfield over the lower-floor image.
+        if (Content.Client._NW.ZLevels.NWZRenderContext.SkipParallax)
+            return false;
+
         if (args.MapId == MapId.Nullspace || _entManager.HasComponent<BiomeComponent>(_entManager.System<SharedMapSystem>().GetMap(args.MapId)))
             return false;
 

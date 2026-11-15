@@ -1,0 +1,29 @@
+# Functional, opt-in variants. Existing decorative stairs keep their old behavior.
+- type: entity
+  parent: RMCAlmayerStairs
+  id: NWZStairsLower
+  name: stairs
+  suffix: NW Z-level, lower half
+  description: Stairs leading to the floor above.
+  components:
+  - type: MZHighGround
+    heightCurve: [0.0, 0.5]
+    stick: true
+
+- type: entity
+  parent: RMCAlmayerStairsTop
+  id: NWZStairsUpper
+  name: stairs
+  suffix: NW Z-level, upper half
+  description: Stairs leading to the floor above.
+  components:
+  - type: MZHighGround
+    heightCurve: [0.5, 1.05]
+    stick: true
+
+- type: entity
+  parent: RMCAlmayerStairsTop
+  id: NWZStairsOpening
+  name: stairs down
+  suffix: NW Z-level, opening marker
+  description: An open stairwell leading to the floor below.

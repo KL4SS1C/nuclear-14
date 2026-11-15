@@ -9,6 +9,7 @@ using System.Numerics;
 using Content.Shared._MultiZ.Core.Components;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
+using Content.Shared.Stunnable;
 using JetBrains.Annotations;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
@@ -63,6 +64,8 @@ public abstract partial class MZSharedSystem
 
     }
 
+    [Dependency] private readonly SharedStunSystem _stun = default!;
+
     private void RaiseZLevelHit(EntityUid uid, float impactPower)
     {
         ApplyFallDamage(uid, impactPower);
@@ -74,6 +77,9 @@ public abstract partial class MZSharedSystem
         if (!HasComp<DamageableComponent>(uid))
             return;
 
+        // CMU's human landing behavior: blunt damage = speed squared, with a capped knockdown.
+        // Do not duplicate damage in a second event handler.
+        _stun.TryKnockdown(uid, TimeSpan.FromSeconds(MathF.Min(impactPower * 0.25f, 5f)), true);
         var damageType = _proto.Index(BluntDamageType);
         var damageAmount = MathF.Pow(impactPower, 2);
         if (damageAmount <= 0f)
@@ -114,6 +120,10 @@ public abstract partial class MZSharedSystem
 
         return distanceToGround >= -MaxStepHeight && distanceToGround <= GroundSnapDistance;
     }
+
+    // CMU handles a fast fall that has crossed below the surface in a single tick.
+    private static bool ShouldTreatAsFallingGroundContact(float distanceToGround, float velocity)
+        => velocity <= 0f && distanceToGround < -MaxStepHeight;
 
     private static float GetGroundSnapDistance(float distanceToGround, bool stickyGround)
     {
@@ -476,7 +486,9 @@ public abstract partial class MZSharedSystem
         if (distanceToGround > GroundSnapDistance)
             return false;
 
-        if (zPhys.LocalPosition < 0f || !ShouldSnapToGround(distanceToGround, stickyGround))
+        if (zPhys.LocalPosition >= 0f ||
+            (!ShouldSnapToGround(distanceToGround, stickyGround) &&
+             !ShouldTreatAsFallingGroundContact(distanceToGround, zPhys.Velocity)))
             return false;
 
         zPhys.LocalPosition -= distanceToGround;
@@ -540,16 +552,20 @@ public abstract partial class MZSharedSystem
                 continue;
             }
 
-            // Gravity
-            if (physics.BodyStatus == BodyStatus.OnGround || zPhys.Velocity > 0)
-                zPhys.Velocity -= ZGravityForce * frameTime;
+            // Vertical gravity must continue after leaving the edge of a floor.
+            zPhys.Velocity -= ZGravityForce * frameTime;
 
             // Apply velocity
             zPhys.LocalPosition += zPhys.Velocity * frameTime;
 
             var distanceToGround = DistanceToGround((uid, zPhys), out var stickyGround);
             var hasGroundContact = ShouldSnapToGround(distanceToGround, stickyGround);
-            var groundSnapDistance = GetGroundSnapDistance(distanceToGround, stickyGround);
+            var fallingGroundContact = !hasGroundContact &&
+                ShouldTreatAsFallingGroundContact(distanceToGround, zPhys.Velocity);
+            var groundSnapDistance = fallingGroundContact
+                ? distanceToGround
+                : GetGroundSnapDistance(distanceToGround, stickyGround);
+            hasGroundContact |= fallingGroundContact;
 
             if (hasGroundContact && physics.BodyStatus != BodyStatus.OnGround)
                 _physics.SetBodyStatus(uid, physics, BodyStatus.OnGround);
@@ -575,6 +591,10 @@ public abstract partial class MZSharedSystem
                     zPhys.Velocity = 0;
                     if (ShouldSleepZPhysics(0f, stickyGround, zPhys.LocalPosition, zPhys.Velocity))
                     {
+                        // A sticky ramp can put us on the next floor while velocity is zero.
+                        // Process the boundary before sleeping, including on the way down.
+                        TryProcessZLevelBoundary(uid, zPhys, stickyGround);
+                        Dirty(uid, zPhys);
                         RemComp<MZFallingComponent>(uid);
                         continue;
                     }
@@ -585,6 +605,8 @@ public abstract partial class MZSharedSystem
 
             if (Math.Abs(zPhys.Velocity) > ZVelocityLimit)
                 zPhys.Velocity = MathF.Sign(zPhys.Velocity) * ZVelocityLimit;
+
+            Dirty(uid, zPhys);
         }
 
         _zMovementUpdateQueue.Clear();
