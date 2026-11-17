@@ -189,6 +189,14 @@ public sealed class DecalPlacementSystem : EntitySystem
         _cleanable = cleanable;
     }
 
+    /// <summary>Cancel a held brush when the NW editor changes its active map.</summary>
+    public void CancelForNWZEditor()
+    {
+        _placing = false;
+        _erasing = false;
+        SetActive(false);
+    }
+
     public void SetActive(bool active)
     {
         _active = active;
@@ -198,3 +206,4 @@ public sealed class DecalPlacementSystem : EntitySystem
             _inputSystem.SetEntityContextActive();
     }
 }
+

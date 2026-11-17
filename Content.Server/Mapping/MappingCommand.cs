@@ -92,12 +92,25 @@ namespace Content.Server.Mapping
                 }
                 else
                 {
-                    var loadOptions = new MapLoadOptions
+                    var loadedBundle = _entities.System<Content.Server._NW.ZMapping.NWZEditorSystem>()
+                        .TryLoadBundle(new ResPath(args[1]), mapId, out var recognized, out var bundleError);
+                    if (recognized)
                     {
-                        ForceMapId = mapId,
-                        DeserializationOptions = new DeserializationOptions { StoreYamlUids = true }
-                    };
-                    _entities.System<MapLoaderSystem>().TryLoadGeneric(new ResPath(args[1]), out _, loadOptions);
+                        if (!loadedBundle)
+                        {
+                            shell.WriteError(bundleError);
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        var loadOptions = new MapLoadOptions
+                        {
+                            ForceMapId = mapId,
+                            DeserializationOptions = new DeserializationOptions { StoreYamlUids = true }
+                        };
+                        _entities.System<MapLoaderSystem>().TryLoadGeneric(new ResPath(args[1]), out _, loadOptions);
+                    }
                 }
 
                 // was the map actually created or did it fail somehow?
@@ -136,3 +149,4 @@ namespace Content.Server.Mapping
         }
     }
 }
+

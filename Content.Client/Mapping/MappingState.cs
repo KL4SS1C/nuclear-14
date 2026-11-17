@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Client.Administration.Managers;
 using Content.Client.ContextMenu.UI;
 using Content.Client.Decals;
@@ -954,6 +954,12 @@ public sealed class MappingState : GameplayStateBase
 
     private void OnRemoveGridPressed(ButtonEventArgs args)
     {
+        if (_entityManager.System<Content.Client._NW.ZMapping.NWZEditorClientSystem>().Active)
+        {
+            args.Button.Pressed = false;
+            return;
+        }
+
         if (args.Button.Pressed)
         {
             Deselect();
@@ -969,6 +975,12 @@ public sealed class MappingState : GameplayStateBase
 
     private void OnMoveGridPressed(ButtonEventArgs args)
     {
+        if (_entityManager.System<Content.Client._NW.ZMapping.NWZEditorClientSystem>().Active)
+        {
+            args.Button.Pressed = false;
+            return;
+        }
+
         if (args.Button.Pressed)
         {
             Deselect();
@@ -990,6 +1002,12 @@ public sealed class MappingState : GameplayStateBase
 
     private void OnGridVVPressed(ButtonEventArgs args)
     {
+        if (_entityManager.System<Content.Client._NW.ZMapping.NWZEditorClientSystem>().Active)
+        {
+            args.Button.Pressed = false;
+            return;
+        }
+
         if (args.Button.Pressed)
         {
             Deselect();
@@ -1204,6 +1222,13 @@ public sealed class MappingState : GameplayStateBase
 
     private bool HandleUse(in PointerInputCmdArgs args)
     {
+        if (_entityManager.System<Content.Client._NW.ZMapping.NWZEditorClientSystem>().Active &&
+            (Screen.RemoveGrid.Pressed || Screen.MoveGrid.Pressed || Screen.GridVV.Pressed))
+        {
+            Screen.RemoveGrid.Pressed = Screen.MoveGrid.Pressed = Screen.GridVV.Pressed = false;
+            return true;
+        }
+
         if (Screen.FixGridAtmos.Pressed)
         {
             Screen.FixGridAtmos.Pressed = false;
@@ -1267,6 +1292,12 @@ public sealed class MappingState : GameplayStateBase
 
     private async void SaveMap()
     {
+        var editor = _entityManager.System<Content.Client._NW.ZMapping.NWZEditorClientSystem>();
+        if (editor.Active)
+        {
+            editor.SaveProject();
+            return;
+        }
         await _mapping.SaveMap();
     }
 
@@ -1367,6 +1398,17 @@ public sealed class MappingState : GameplayStateBase
 
     public override void FrameUpdate(FrameEventArgs e)
     {
+        var nwEditor = _entityManager.System<Content.Client._NW.ZMapping.NWZEditorClientSystem>();
+        Screen.MoveGrid.Disabled = nwEditor.Active;
+        Screen.RemoveGrid.Disabled = nwEditor.Active;
+        Screen.GridVV.Disabled = nwEditor.Active;
+        if (nwEditor.Active)
+        {
+            if (_gridDrag.Enabled)
+                _consoleHost.ExecuteCommand("griddrag");
+            Screen.MoveGrid.Pressed = Screen.RemoveGrid.Pressed = Screen.GridVV.Pressed = false;
+        }
+
         if (!Screen.EraseTileButton.Pressed && _tileErase)
         {
             _placement.Clear();
@@ -1415,3 +1457,4 @@ public sealed class MappingState : GameplayStateBase
         public Color? SecondColor;
     }
 }
+
