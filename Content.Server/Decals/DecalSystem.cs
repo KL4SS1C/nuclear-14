@@ -223,6 +223,10 @@ namespace Content.Server.Decals
             if (!coordinates.IsValid(EntityManager))
                 return;
 
+            // NW mapper: decals bypass the engine placement gate, so enforce the same floor lock here.
+            if (!EntityManager.System<Content.Server._NW.ZMapping.NWZEditorSystem>().CanEdit(session, coordinates.EntityId))
+                return;
+
             if (!TryAddDecal(ev.Decal, coordinates, out _))
                 return;
 
@@ -250,6 +254,10 @@ namespace Content.Server.Decals
             var coordinates = GetCoordinates(ev.Coordinates);
 
             if (!coordinates.IsValid(EntityManager))
+                return;
+
+            // NW mapper: decals bypass the engine placement gate, so enforce the same floor lock here.
+            if (!EntityManager.System<Content.Server._NW.ZMapping.NWZEditorSystem>().CanEdit(session, coordinates.EntityId))
                 return;
 
             var gridId = coordinates.GetGridUid(EntityManager);
@@ -582,3 +590,4 @@ namespace Content.Server.Decals
         #endregion
     }
 }
+
