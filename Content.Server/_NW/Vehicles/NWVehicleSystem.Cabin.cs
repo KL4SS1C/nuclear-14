@@ -47,6 +47,7 @@ public sealed partial class NWVehicleSystem
         SubscribeLocalEvent<NWVehicleCabinSeatComponent, UnstrappedEvent>(OnCabinUnstrapped);
         SubscribeLocalEvent<NWVehicleCabinViewerComponent, NWVehicleCabinViewActionEvent>(OnCabinViewAction);
         SubscribeLocalEvent<NWVehicleCabinViewerComponent, NWVehicleIgnitionActionEvent>(OnIgnitionAction);
+        SubscribeLocalEvent<NWVehicleCabinViewerComponent, NWVehicleReadyGunActionEvent>(OnReadyGunAction);
         SubscribeLocalEvent<NWVehicleCabinViewerComponent, NWVehicleCabinGearActionEvent>(OnCabinGearAction);
         SubscribeLocalEvent<NWVehicleCabinViewerComponent, NWVehicleCabinLightsActionEvent>(OnCabinLightsAction);
         SubscribeLocalEvent<PlayerAttachedEvent>(OnCabinPlayerAttached);
@@ -279,6 +280,8 @@ public sealed partial class NWVehicleSystem
         }
         if (ent.Comp.SeatIndex == vehicle.GunnerSeat) vehicle.Gunner = user;
         var viewer = SetupCabinViewer(user, hull);
+        if (ent.Comp.SeatIndex == vehicle.GunnerSeat)
+            _actions.AddAction(user, ref viewer.ReadyGunAction, "ActionNWVehicleReadyGun", user);
         if (ent.Comp.SeatIndex == 0)
         {
             _actions.AddAction(user, ref viewer.GearAction, "ActionNWVehicleCabinGear", user);
@@ -351,6 +354,7 @@ public sealed partial class NWVehicleSystem
         _actions.RemoveAction(user, viewer.GearAction);
         _actions.RemoveAction(user, viewer.IgnitionAction);
         _actions.RemoveAction(user, viewer.LightsAction);
+        _actions.RemoveAction(user, viewer.ReadyGunAction);
         RemComp<NWVehicleCabinViewerComponent>(user);
     }
 
@@ -370,6 +374,36 @@ public sealed partial class NWVehicleSystem
         // No unattended driving while the driver's camera is inside.
         if (TryComp<NWVehicleComponent>(hull, out var vehicle) && vehicle.Pilot == ent.Owner)
             vehicle.HeldInputs = NWVehicleControlInput.None;
+    }
+
+    private void OnReadyGunAction(Entity<NWVehicleCabinViewerComponent> ent, ref NWVehicleReadyGunActionEvent args)
+    {
+        if (args.Handled || args.Performer != ent.Owner || _mobState.IsIncapacitated(ent) ||
+            !CabinExterior(ent, out var hull) || ent.Comp.Exterior != hull ||
+            !TryComp<NWVehicleComponent>(hull, out var vehicle) || vehicle.Gunner != ent.Owner ||
+            !TryComp<BuckleComponent>(ent, out var buckle) || buckle.BuckledTo is not { } seat ||
+            !TryComp<NWVehicleCabinSeatComponent>(seat, out var station) ||
+            station.Exterior != hull || station.SeatIndex != vehicle.GunnerSeat)
+            return;
+        args.Handled = true;
+        PrepareMountedGun(hull, ent.Owner);
+        var chamber = _cabinGuns.GetChamberEntity(hull);
+        var ready = chamber is { } round && TryComp<CartridgeAmmoComponent>(round, out var cartridge) && !cartridge.Spent &&
+            TryComp<ChamberMagazineAmmoProviderComponent>(hull, out var provider) && provider.BoltClosed != false;
+        CabinNotice(ent.Owner, ready ? "nw-vehicle-gun-ready" : "nw-vehicle-gun-needs-ammo");
+    }
+
+    private void PrepareMountedGun(EntityUid hull, EntityUid user)
+    {
+        if (!TryComp<ChamberMagazineAmmoProviderComponent>(hull, out var provider) || provider.BoltClosed == null)
+            return;
+        var chamber = _cabinGuns.GetChamberEntity(hull);
+        // Opening a closed bolt ejects its cartridge. Only cycle an empty or spent chamber;
+        // repeated use of this action must never throw away a live shell or M60 round.
+        if (provider.BoltClosed == true &&
+            (chamber == null || TryComp<CartridgeAmmoComponent>(chamber, out var cartridge) && cartridge.Spent))
+            _cabinGuns.SetBoltClosed(hull, provider, false, user);
+        _cabinGuns.SetBoltClosed(hull, provider, true, user);
     }
 
     private void OnIgnitionAction(Entity<NWVehicleCabinViewerComponent> ent, ref NWVehicleIgnitionActionEvent args)
@@ -429,12 +463,8 @@ public sealed partial class NWVehicleSystem
             !_cabinHands.TryGetActiveItem(args.User, out var item) || item != args.Used ||
             !_equipmentSlots.TryInsertFromHand(hull, slot, args.User)) return;
         args.Handled = true;
-        // Closing the feed chambers a fresh round, including after the magazine ran dry.
-        if (TryComp<ChamberMagazineAmmoProviderComponent>(hull, out var provider))
-        {
-            _cabinGuns.SetBoltClosed(hull, provider, false, args.User);
-            _cabinGuns.SetBoltClosed(hull, provider, true, args.User);
-        }
+        // Prepare an empty chamber without ejecting any live round already loaded.
+        PrepareMountedGun(hull, args.User);
     }
 
     private void OnCabinAmmoEject(Entity<NWVehicleCabinAmmoFeedComponent> ent, ref ActivateInWorldEvent args)

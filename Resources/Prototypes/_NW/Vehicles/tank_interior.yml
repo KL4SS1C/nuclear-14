@@ -1,0 +1,525 @@
+- type: entity
+  id: NWvehicleTankCabinRMCRotaryPhoneWallmount
+  name: disconnected field telephone
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/general.rsi
+    state: wall_phone
+    drawdepth: Overdoors
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinRMCSeatTankDriver
+  name: tank driver's seat
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/general.rsi
+    state: armor_chair
+    drawdepth: Objects
+    noRot: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Strap
+    position: Stand
+    buckleOffset: 0,-0.05
+    modifyBuckleDrawDepth: false
+  - type: NWVehicleCabinSeat
+    seatIndex: 0
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinRMCSeatTankGunner
+  name: tank gunner's seat
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/general.rsi
+    state: armor_chair
+    drawdepth: Objects
+    noRot: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Strap
+    position: Stand
+    buckleOffset: 0,-0.05
+    modifyBuckleDrawDepth: false
+  - type: NWVehicleCabinSeat
+    seatIndex: 1
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankAmmoLoader
+  name: LTB ammunition feed
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/general.rsi
+    drawdepth: LowFloors
+    state: weapons_loader
+  - type: InteractionOutline
+  - type: Clickable
+  - type: NWVehicleCabinAmmoFeed
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleInteriorExtinguisher
+  name: extinguisher cabinet (decorative)
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: false
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/general.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: extinguisher
+    - state: extinguisher_full
+      map:
+      - enum.ItemCabinetVisuals.Layer
+      visible: false
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleInteriorNanomed
+  name: medical cabinet (decorative)
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: false
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/general.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: nanomed
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankBack1
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Walls
+    state: back_1
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankBack2
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Walls
+    state: back_2
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankBack3
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Walls
+    state: back_3
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankExitHatch
+  name: tank exit hatch
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Walls
+    state: hatch
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Clickable
+  - type: InteractionOutline
+  - type: NWVehicleCabinExit
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankExterior1
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: exterior_1
+      map:
+      - roof
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankExterior3
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Objects
+    state: exterior_3
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankFront1
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Walls
+    state: front_1
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankFront2
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Walls
+    state: front_2
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankFront3
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Walls
+    state: front_3
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankProp0
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Walls
+    state: prop0
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankProp2
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Walls
+    state: prop2
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankProp3
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Walls
+    state: prop3
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankProp4
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Walls
+    state: prop4
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankProp5
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Walls
+    state: prop5
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankProp6
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Walls
+    state: prop6
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankProp7
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Walls
+    state: prop7
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankProp8Extra
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Walls
+    state: prop8_extra
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankTankRight2
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Overdoors
+    layers:
+    - state: tank_right_2
+      map:
+      - roof
+    color: '#FFFFFF59'
+  - type: InteractionTransparency
+  - type: NWVehicleCabinFixture
+- type: entity
+  id: NWvehicleTankCabinVehicleTankWall
+  name: tank interior panel
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/tank.rsi
+    drawdepth: Walls
+    state: wall
+  - type: InteractionTransparency
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Occluder
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.49,-0.49,0.49,0.49
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: NWVehicleCabinFixture

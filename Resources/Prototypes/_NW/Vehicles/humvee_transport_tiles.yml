@@ -1,0 +1,45 @@
+- type: tile
+  id: NWvehicleTransportFloorDarkSterileGreen1
+  name: vehicle floor
+  sprite: /Textures/_NW/Vehicles/Interiors/TransportTiles/dark_sterile_green_1.png
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 1
+  heatCapacity: 10000
+- type: tile
+  id: NWvehicleTransportFloorFloor1_10
+  name: vehicle floor
+  sprite: /Textures/_NW/Vehicles/Interiors/TransportTiles/floor_1_10.png
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 1
+  heatCapacity: 10000
+- type: tile
+  id: NWvehicleTransportFloorFloor2
+  name: vehicle floor
+  sprite: /Textures/_NW/Vehicles/Interiors/TransportTiles/floor_2.png
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 1
+  heatCapacity: 10000
+- type: tile
+  id: NWvehicleTransportFloorFloor2_12
+  name: vehicle floor
+  sprite: /Textures/_NW/Vehicles/Interiors/TransportTiles/floor_2_12.png
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 1
+  heatCapacity: 10000
+- type: tile
+  id: NWvehicleTransportFloorFloor2_7
+  name: vehicle floor
+  sprite: /Textures/_NW/Vehicles/Interiors/TransportTiles/floor_2_7.png
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 1
+  heatCapacity: 10000

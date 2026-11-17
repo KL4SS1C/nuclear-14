@@ -1,0 +1,230 @@
+- type: entity
+  id: NWvehicleM60TurretVisual
+  name: turret visual
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/humvee.rsi
+    drawdepth: OverMobs
+    noRot: false
+    layers:
+    - state: humveeturret_0
+    - state: humveecannon_0
+  categories:
+  - HideSpawnMenu
+- type: entity
+  id: NWvehicleTankTurretVisual
+  name: turret visual
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/tank.rsi
+    drawdepth: OverMobs
+    noRot: false
+    layers:
+    - state: tank_turret_0
+    - state: ltb_cannon_0
+  categories:
+  - HideSpawnMenu
+- type: entity
+  id: NWvehicleTank
+  name: RMC light tank
+  components:
+  - type: NWVehicle
+    seatCount: 2
+    gunnerSeat: 1
+    cargoCapacity: 0
+    maxSpeed: 7
+    thrustAcceleration: 3
+    reverseAcceleration: 2
+    fuelUsePerSecond: 0.35
+    hasOverlights: true
+  - type: NWGroundVehicle
+    maxIntegrity: 1000
+    maxReverseSpeed: 3
+    turnDelay: 0.5
+    runOverRadius: 1.3
+    wreckPrototype: NWvehicleTankWreck
+  - type: NWVehicleTurret
+    degreesPerSecond: 60
+    visual: NWvehicleTankTurretVisual
+    tankBarrelOffset: true
+  - type: Sprite
+    sprite: _NW/Vehicles/tank.rsi
+    drawdepth: Mobs
+    noRot: false
+    layers:
+    - state: tank_base
+    - state: wheels_0
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -1.2,-1.6,1.2,1.6
+        density: 900
+        hard: true
+        mask:
+        - LargeMobMask
+        - BulletImpassable
+        layer:
+        - LargeMobLayer
+        - Impassable
+  - type: SolutionContainerManager
+    solutions:
+      groundVehicleFuel:
+        maxVol: 600
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 600
+  - type: PointLight
+    enabled: false
+    radius: 10
+    energy: 2
+    color: '#fff0d0'
+  - type: Destructible
+    thresholds:
+    - trigger: !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts:
+        - Destruction
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/tank.yml
+    entryPoints:
+    - 0.5,-1.0
+  - type: Gun
+    minAngle: 0
+    maxAngle: 1
+    angleIncrease: 0.2
+    angleDecay: 3
+    fireRate: 0.05
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_NW/Vehicles/tank_cannon.ogg
+    projectileSpeed: 30
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: NWvehicleTankAmmoBox
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - NWvehicleTankAmmoBox
+      gun_chamber:
+        name: Chamber
+        startingItem: NWvehicleTankShell
+        priority: 1
+        whitelist:
+          tags:
+          - NWvehicleTankShell
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot {}
+      gun_chamber: !type:ContainerSlot {}
+  parent: NWvehicleGroundBase
+  description: A tracked armored vehicle with a playable cabin, driver station and traversing LTB cannon. Load cannon magazines through the interior
+    feed.
+- type: entity
+  id: NWvehicleTankWreck
+  name: wrecked tank chassis
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -1.2,-1.6,1.2,1.6
+        density: 900
+        hard: true
+        mask:
+        - LargeMobMask
+        - BulletImpassable
+        layer:
+        - LargeMobLayer
+        - Impassable
+  - type: Clickable
+  - type: Sprite
+    sprite: _NW/Vehicles/tank.rsi
+    drawdepth: Objects
+    noRot: false
+    layers:
+    - state: tank_base
+    - state: wheels_1
+    - state: damaged_frame
+    - state: damaged_turret
+  parent: NWvehicleWreckBase
+- type: Tag
+  id: NWvehicleTankShell
+- type: Tag
+  id: NWvehicleTankAmmoBox
+- type: entity
+  id: NWvehicleTankShell
+  name: LTB high-explosive shell
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - NWvehicleTankShell
+  - type: CartridgeAmmo
+    proto: NWvehicleTankProjectile
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    layers:
+    - state: frag
+      map:
+      - enum.AmmoVisualLayers.Base
+  - type: SpentAmmoVisuals
+    state: frag
+    suffix: false
+  parent: BaseCartridgeLightRifle
+- type: entity
+  id: NWvehicleTankProjectile
+  name: LTB shell
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 40
+        Piercing: 80
+  - type: Explosive
+    explosionType: N14DefaultStructural
+    maxIntensity: 8
+    intensitySlope: 4
+    totalIntensity: 80
+    maxTileBreak: 0
+  parent: BaseGrenadeProjectile
+  categories:
+  - HideSpawnMenu
+- type: entity
+  id: NWvehicleTankAmmoBox
+  name: LTB ammunition magazine
+  components:
+  - type: Item
+    size: Large
+  - type: Tag
+    tags:
+    - NWvehicleTankAmmoBox
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+      - NWvehicleTankShell
+    proto: NWvehicleTankShell
+    capacity: 4
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container {}
+  - type: Sprite
+    sprite: _NW/Vehicles/tank_ammo.rsi
+    state: ltbcannon_4
+  parent: BaseItem
+  description: Four high-explosive shells for the tank cannon. Insert into the interior ammunition feed.

@@ -1,0 +1,19 @@
+- type: entity
+  id: NWRotaryPhonePlayer
+  parent: NWRotaryPhone
+  name: configurable telephone
+  description: A telephone that can create or join a player network using an invitation code.
+  components:
+  - type: NWRotaryPhone
+    allowNetworkChanges: true
+    networkId: public
+
+- type: entity
+  id: NWIntercomPlayer
+  parent: NWIntercom
+  name: configurable intercom telephone
+  description: A wall handset terminal that can create or join a player network.
+  components:
+  - type: NWRotaryPhone
+    allowNetworkChanges: true
+    networkId: public

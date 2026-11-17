@@ -1,0 +1,92 @@
+- type: entity
+  id: NWRotaryPhone
+  name: rotary telephone
+  description: A desk telephone. Select a contact, then speak while holding the handset. Use the handset on its base to hang up.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Sprite
+    sprite: _NW/Telephone/Structures/rotary_phone.rsi
+    drawdepth: WallMountedItems
+    layers:
+    - state: rotary_phone
+      map: [base]
+  - type: InteractionOutline
+  - type: Clickable
+  - type: NWRotaryPhone
+  - type: ContainerContainer
+    containers:
+      nw_rotary_phone_telephone: !type:ContainerSlot {}
+  - type: ActivatableUI
+    key: enum.NWTelephoneUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.NWTelephoneUiKey.Key:
+        type: NWTelephoneBui
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.NWRotaryPhoneLayers.Layer:
+        base:
+          Base: { state: rotary_phone }
+          Ring: { state: rotary_phone_ring }
+          Ear: { state: rotary_phone_ear }
+
+- type: entity
+  parent: NWRotaryPhone
+  id: NWRotaryPhoneWallmount
+  name: wall-mounted telephone
+  description: A wall-mounted telephone. Select a contact, then speak while holding the handset.
+  placement:
+    mode: SnapgridCenter
+    snap: [Wallmount]
+  components:
+  - type: WallMount
+  - type: Sprite
+    sprite: _NW/Telephone/Structures/wallmount_phone.rsi
+    layers:
+    - state: wall_phone
+      map: [base]
+  - type: GenericVisualizer
+    visuals:
+      enum.NWRotaryPhoneLayers.Layer:
+        base:
+          Base: { state: wall_phone }
+          Ring: { state: wall_phone_ring }
+          Ear: { state: wall_phone_ear }
+
+- type: entity
+  parent: BaseItem
+  id: NWTelephone
+  name: telephone handset
+  description: Return it to its telephone base to end the call.
+  components:
+  - type: Sprite
+    sprite: _NW/Telephone/Objects/phone.rsi
+    state: rpb_phone
+  - type: Item
+    size: Small
+  - type: NWTelephone
+
+- type: entity
+  parent: NWRotaryPhone
+  id: NWRotaryPhoneMilitary
+  name: military telephone
+  components:
+  - type: NWRotaryPhone
+    networkId: military
+    category: Command
+
+- type: entity
+  parent: NWRotaryPhoneWallmount
+  id: NWRotaryPhoneWallmountMilitary
+  name: military wall-mounted telephone
+  components:
+  - type: NWRotaryPhone
+    networkId: military
+    category: Command

@@ -57,7 +57,10 @@ public sealed partial class NWVehicleCabinViewerComponent : Component
     [DataField] public EntityUid? IgnitionAction;
     [DataField] public EntityUid? GearAction;
     [DataField] public EntityUid? LightsAction;
+    [DataField] public EntityUid? ReadyGunAction;
 }
+
+public sealed partial class NWVehicleReadyGunActionEvent : InstantActionEvent;
 
 public sealed partial class NWVehicleCabinViewActionEvent : InstantActionEvent;
 public sealed partial class NWVehicleIgnitionActionEvent : InstantActionEvent;

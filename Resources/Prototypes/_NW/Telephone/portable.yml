@@ -1,0 +1,153 @@
+- type: entity
+  id: NWPhoneBackpack
+  parent: ClothingBackpack
+  name: field telephone backpack
+  description: A portable telephone with a private network directory. Wear it on your
+    back and use the telephone action.
+  components:
+  - type: Sprite
+    sprite: _NW/Telephone/Portable/radio_pack.rsi
+    layers:
+    - state: icon
+      map:
+      - base
+    - state: closed
+  - type: Clothing
+    sprite: _NW/Telephone/Portable/radio_pack.rsi
+    quickEquip: false
+    slots:
+    - back
+  - type: NWRotaryPhone
+    category: Field units
+    networkId: public
+    allowNetworkChanges: true
+    phoneCanBeTransferred: false
+  - type: NWPhoneBackpack
+  - type: Storage
+    grid:
+    - 0,0,4,2
+  - type: UserInterface
+    interfaces:
+      enum.NWTelephoneUiKey.Key:
+        type: NWTelephoneBui
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.NWRotaryPhoneLayers.Layer:
+        base:
+          Base:
+            state: icon
+          Ring:
+            state: ring
+          Ear:
+            state: ear
+- type: entity
+  id: NWPhoneBag
+  parent: ClothingBackpack
+  name: portable bag telephone
+  description: A portable telephone with a private network directory. Wear it on your
+    back and use the telephone action.
+  components:
+  - type: Sprite
+    sprite: _NW/Telephone/Portable/bag_phone.rsi
+    layers:
+    - state: icon
+      map:
+      - base
+    - state: closed
+  - type: Clothing
+    sprite: _NW/Telephone/Portable/bag_phone.rsi
+    quickEquip: false
+    slots:
+    - back
+  - type: NWRotaryPhone
+    category: Field units
+    networkId: public
+    allowNetworkChanges: true
+    phoneCanBeTransferred: false
+  - type: NWPhoneBackpack
+  - type: Storage
+    grid:
+    - 0,0,4,2
+  - type: UserInterface
+    interfaces:
+      enum.NWTelephoneUiKey.Key:
+        type: NWTelephoneBui
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.NWRotaryPhoneLayers.Layer:
+        base:
+          Base:
+            state: icon
+          Ring:
+            state: ring
+          Ear:
+            state: ear
+- type: entity
+  id: NWIntercom
+  parent: NWRotaryPhoneWallmount
+  name: wall intercom telephone
+  description: A wall terminal with a handset linked to its configured telephone network.
+- type: entity
+  id: NWRotaryPhoneEnclave
+  parent: NWRotaryPhone
+  name: Enclave telephone
+  components:
+  - type: NWRotaryPhone
+    networkId: enclave
+    allowNetworkChanges: false
+    category: Facilities
+- type: entity
+  id: NWIntercomEnclave
+  parent: NWIntercom
+  name: Enclave intercom telephone
+  components:
+  - type: NWRotaryPhone
+    networkId: enclave
+    allowNetworkChanges: false
+    category: Facilities
+- type: entity
+  id: NWPhoneBackpackEnclave
+  parent: NWPhoneBackpack
+  name: Enclave field telephone backpack
+  components:
+  - type: NWRotaryPhone
+    networkId: enclave
+    allowNetworkChanges: false
+    category: Field units
+- type: entity
+  id: NWPhoneBagEnclave
+  parent: NWPhoneBag
+  name: Enclave portable telephone
+  components:
+  - type: NWRotaryPhone
+    networkId: enclave
+    allowNetworkChanges: false
+    category: Field units
+- type: entity
+  id: NWIntercomEnclaveHotel
+  parent: NWIntercomEnclave
+  name: Enclave Hotel - Reception
+  components:
+  - type: NWRotaryPhone
+    networkId: enclave
+    allowNetworkChanges: false
+    category: Hotel
+
+- type: entity
+  id: NWActionPhoneBackpack
+  name: Use field telephone
+  description: Open the directory, answer an incoming call, or hang up your handset.
+  categories: [HideSpawnMenu]
+  components:
+  - type: InstantAction
+    useDelay: 0.5
+    icon:
+      sprite: _NW/Telephone/Objects/phone.rsi
+      state: rpb_phone
+    event: !type:NWPhoneBackpackActionEvent {}

@@ -197,7 +197,8 @@
     layers:
     - state: humvee_base
     - state: wheels_0
-      map: [nw-humvee-wheels]
+      map:
+      - nw-humvee-wheels
     - state: humveehatch_0
     - state: overlight_off
       map:
@@ -234,9 +235,12 @@
     layers:
     - state: humvee_base
     - state: wheels_0
-      map: [nw-humvee-wheels]
+      map:
+      - nw-humvee-wheels
     - state: humveeturret_0
+      visible: false
     - state: humveecannon_0
+      visible: false
     - state: overlight_off
       map:
       - nw-overlights
@@ -286,25 +290,32 @@
       gun_chamber: !type:ContainerSlot {}
   - type: NWVehicleCabin
     interiorPath: /Maps/_NW/Vehicles/humvee_m60.yml
+  - type: NWVehicleTurret
+    degreesPerSecond: 120
+    visual: NWvehicleM60TurretVisual
 - type: entity
   parent: NWvehicleGroundBase
   id: NWvehicleVan
-  name: wasteland cargo truck
-  description: An eight-seat cargo truck with a walkable interior. Stop the engine before boarding or loading.
+  name: wasteland cargo van
+  description: An eight-seat cargo van with a walkable interior. Stop the engine before boarding or loading.
   components:
   - type: Fixtures
     fixtures:
       fix1:
         shape: !type:PolygonShape
           vertices:
-          - "-0.7,-1.45"
-          - "0.7,-1.45"
-          - "0.7,1.45"
-          - "-0.7,1.45"
+          - -0.7,-1.45
+          - 0.7,-1.45
+          - 0.7,1.45
+          - -0.7,1.45
         density: 132.792
         hard: true
-        mask: [LargeMobMask, BulletImpassable]
-        layer: [LargeMobLayer, Impassable]
+        mask:
+        - LargeMobMask
+        - BulletImpassable
+        layer:
+        - LargeMobLayer
+        - Impassable
   - type: NWGroundVehicle
     maxReverseSpeed: 2
     wreckPrototype: NWvehicleVanWreck
@@ -386,7 +397,7 @@
 - type: entity
   parent: NWvehicleWreckBase
   id: NWvehicleVanWreck
-  name: wrecked truck chassis
+  name: wrecked van chassis
   description: A twisted frame resting on ruined wheels.
   components:
   - type: Fixtures
@@ -394,14 +405,18 @@
       fix1:
         shape: !type:PolygonShape
           vertices:
-          - "-0.7,-1.45"
-          - "0.7,-1.45"
-          - "0.7,1.45"
-          - "-0.7,1.45"
+          - -0.7,-1.45
+          - 0.7,-1.45
+          - 0.7,1.45
+          - -0.7,1.45
         density: 132.792
         hard: true
-        mask: [LargeMobMask, BulletImpassable]
-        layer: [LargeMobLayer, Impassable]
+        mask:
+        - LargeMobMask
+        - BulletImpassable
+        layer:
+        - LargeMobLayer
+        - Impassable
   - type: Clickable
   - type: Sprite
     sprite: _NW/Vehicles/van.rsi

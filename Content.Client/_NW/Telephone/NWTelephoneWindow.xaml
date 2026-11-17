@@ -1,0 +1,20 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+ xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+ Title="Telephone directory" MinSize="460 500" SetSize="520 640">
+ <BoxContainer Orientation="Vertical" Margin="8" SeparationOverride="6">
+  <Label Name="NetworkLabel" Access="Public" Text="Network"/>
+  <BoxContainer Name="NetworkControls" Access="Public" Orientation="Vertical" SeparationOverride="4" Visible="False">
+   <Label Text="Create or join a private player network"/>
+   <LineEdit Name="NetworkNameInput" Access="Public" PlaceHolder="Network name (3-48 characters)"/>
+   <LineEdit Name="NewNetworkCodeInput" Access="Public" PlaceHolder="Choose your invitation code (e.g. Detroit Alfa)"/>
+   <Button Name="CreateNetwork" Access="Public" Text="Create private network"/>
+   <LineEdit Name="NetworkCodeInput" Access="Public" PlaceHolder="Enter an invitation code to join"/>
+   <Button Name="JoinNetwork" Access="Public" Text="Join with invitation code"/>
+   <Label Name="InviteLabel" Access="Public" Text="Your invitation code (share privately)"/>
+   <LineEdit Name="InviteCode" Access="Public" Editable="False"/>
+   <Button Name="LeaveNetwork" Access="Public" Text="Leave network and use public directory"/>
+  </BoxContainer>
+  <TabContainer Name="Tabs" Access="Public" HorizontalExpand="True" VerticalExpand="True"/>
+  <BoxContainer Name="Buttons" Access="Public" Orientation="Vertical"/>
+ </BoxContainer>
+</controls:FancyWindow>

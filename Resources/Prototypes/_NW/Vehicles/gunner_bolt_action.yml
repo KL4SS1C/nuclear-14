@@ -1,0 +1,14 @@
+- type: entity
+  id: ActionNWVehicleReadyGun
+  name: Ready mounted gun
+  description: Close the bolt and chamber a round from the loaded magazine. Requires the gunner's seat.
+  categories: [HideSpawnMenu]
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    useDelay: 1
+    icon:
+      sprite: _NW/Vehicles/key.rsi
+      state: key
+    event: !type:NWVehicleReadyGunActionEvent {}

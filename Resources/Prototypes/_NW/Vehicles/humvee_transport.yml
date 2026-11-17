@@ -1,0 +1,65 @@
+- type: entity
+  id: NWvehicleHumveeTransport
+  parent: NWvehicleHumvee
+  name: transport Humvee
+  description: A transport Humvee with a driver, a front passenger and six rear passenger
+    seats.
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/humvee_transport.rsi
+    layers:
+    - state: humvee_base
+    - state: wheels_0
+      map:
+      - nw-humvee-wheels
+    - state: overlight_off
+      map:
+      - nw-overlights
+  - type: NWVehicle
+    seatCount: 8
+    gunnerSeat: -1
+  - type: NWGroundVehicle
+    wreckPrototype: NWvehicleHumveeTransportWreck
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/humvee_transport.yml
+    entryPoints:
+    - 3.55,-0.38
+    - 3.55,-1.18
+    - 0.95,-0.8
+- type: entity
+  id: NWvehicleHumveeTransportWreck
+  parent: NWvehicleHumveeWreck
+  name: wrecked transport Humvee chassis
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/humvee_transport.rsi
+    layers:
+    - state: humvee_base
+    - state: wheels_1
+    - state: damaged_frame
+- type: entity
+  id: NWvehicleCabinVehicleHumveeCarrierBackDoor1
+  parent: NWvehicleCabinVehicleHumveeExitDoorDirectional
+  name: rear vehicle door
+  components:
+  - type: Sprite
+    state: carrier_backdoor1
+- type: entity
+  id: NWvehicleCabinVehicleHumveeCarrierBackDoor2
+  parent: NWvehicleCabinVehicleHumveeExitDoorDirectional
+  name: rear vehicle door
+  components:
+  - type: Sprite
+    state: carrier_backdoor2
+- type: entity
+  id: NWvehicleCabinVehicleHumveeChassisTransport
+  parent: NWvehicleCabinVehicleHumveeChassis
+  components:
+  - type: Sprite
+    state: humvee_chassis_transport
+- type: entity
+  id: NWvehicleCabinVehicleHumveeViewportSmall
+  parent: NWvehicleCabinVehicleHumveeViewportFrontNorth
+  components:
+  - type: Sprite
+    state: small_viewport

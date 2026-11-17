@@ -413,7 +413,16 @@ public abstract partial class SharedGunSystem : EntitySystem
         var fromCoordinates = HasComp<Content.Shared._NW.Vehicles.NWVehicleComponent>(gunUid)
             ? Transform(gunUid).Coordinates : Transform(user).Coordinates;
 
-        if (HasComp<Content.Shared._NW.Vehicles.NWVehicleComponent>(gunUid))
+        if (TryComp<Content.Shared._NW.Vehicles.NWVehicleTurretComponent>(gunUid, out var turret))
+        {
+            // Authoritative barrel bearing, not the requested mouse position. Keep origin inside
+            // the hull and ignore that hull only, so a nearby wall cannot be skipped by a muzzle offset.
+            var origin = _xform.ToMapCoordinates(fromCoordinates);
+            var requested = _xform.ToMapCoordinates(toCoordinates.Value);
+            var distance = Math.Clamp((requested.Position - origin.Position).Length(), 1f, 128f);
+            toCoordinates = _xform.ToCoordinates(new MapCoordinates(origin.Position + turret.WorldYaw.ToWorldVec() * distance, origin.MapId));
+        }
+        else if (HasComp<Content.Shared._NW.Vehicles.NWVehicleComponent>(gunUid))
         {
             var direction = _xform.ToMapCoordinates(toCoordinates.Value).Position - _xform.ToMapCoordinates(fromCoordinates).Position;
             if (direction.LengthSquared() > 0.0001f)
@@ -567,7 +576,8 @@ public abstract partial class SharedGunSystem : EntitySystem
         var projectile = EnsureComp<ProjectileComponent>(uid);
         Projectiles.SetShooter(uid, projectile, user ?? gunUid);
         projectile.Weapon = gunUid;
-        projectile.ExtraIgnoredEntity = GetShotExtraIgnoredEntity(user);
+        projectile.ExtraIgnoredEntity = HasComp<Content.Shared._NW.Vehicles.NWVehicleComponent>(gunUid)
+            ? gunUid : GetShotExtraIgnoredEntity(user);
 
         _xform.SetWorldRotationNoLerp(uid, direction.ToWorldAngle() + projectile.Angle);
     }

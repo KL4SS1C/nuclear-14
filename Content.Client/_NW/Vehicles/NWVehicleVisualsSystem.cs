@@ -28,7 +28,7 @@ public sealed class NWVehicleVisualsSystem : EntitySystem
         {
             if (vehicle.HasOverlights && sprite.LayerMapTryGet("nw-overlights", out var lights))
                 sprite.LayerSetState(lights, vehicle.LightsEnabled ? "overlight_on" : "overlight_off");
-            if (vehicle.GunnerSeat >= 0)
+            if (vehicle.GunnerSeat >= 0 && !HasComp<NWVehicleTurretComponent>(uid))
             {
                 sprite.LayerSetRotation(2, vehicle.TurretBearing);
                 sprite.LayerSetRotation(3, vehicle.TurretBearing);
