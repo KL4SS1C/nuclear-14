@@ -4,7 +4,7 @@ meta:
   engineVersion: 286.0.0
   forkId: ''
   forkVersion: ''
-  time: 11/17/2026 14:36:36
+  time: 11/17/2026 15:34:15
   entityCount: 2403
 maps:
 - 1
@@ -2322,7 +2322,7 @@ entities:
     - type: Physics
       bodyType: Dynamic
     - type: Drain
-      accumulator: 0.5387138
+      accumulator: 0.27530318
     - type: Fixtures
       fixtures: {}
   - uid: 13407
@@ -2335,7 +2335,7 @@ entities:
     - type: Physics
       bodyType: Dynamic
     - type: Drain
-      accumulator: 0.8541981
+      accumulator: 0.16615005
     - type: Fixtures
       fixtures: {}
   - uid: 13411
@@ -2348,7 +2348,7 @@ entities:
     - type: Physics
       bodyType: Dynamic
     - type: Drain
-      accumulator: 0.7764758
+      accumulator: 0.060535364
     - type: Fixtures
       fixtures: {}
 - proto: Magazine308M60Box

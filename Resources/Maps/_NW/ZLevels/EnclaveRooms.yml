@@ -4,8 +4,8 @@ meta:
   engineVersion: 286.0.0
   forkId: ''
   forkVersion: ''
-  time: 11/17/2026 14:36:36
-  entityCount: 2505
+  time: 11/17/2026 15:34:15
+  entityCount: 2520
 maps:
 - 1
 grids:
@@ -1241,7 +1241,7 @@ entities:
       parent: 1
       pos: 41.5,-14.5
     - type: Drain
-      accumulator: 0.8458136
+      accumulator: 0.48496243
     - type: Fixtures
       fixtures: {}
   - uid: 70
@@ -1250,7 +1250,7 @@ entities:
       parent: 1
       pos: 40.5,-8.5
     - type: Drain
-      accumulator: 0.07151265
+      accumulator: 0.20651983
     - type: Fixtures
       fixtures: {}
   - uid: 93
@@ -1259,7 +1259,7 @@ entities:
       parent: 1
       pos: 40.5,-27.5
     - type: Drain
-      accumulator: 0.4396252
+      accumulator: 0.88537055
     - type: Fixtures
       fixtures: {}
   - uid: 94
@@ -1268,7 +1268,7 @@ entities:
       parent: 1
       pos: 41.5,-20.5
     - type: Drain
-      accumulator: 0.45266137
+      accumulator: 0.0033961413
     - type: Fixtures
       fixtures: {}
   - uid: 13404
@@ -1278,7 +1278,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 25.5,-27.5
     - type: Drain
-      accumulator: 0.6415687
+      accumulator: 0.18599972
     - type: Fixtures
       fixtures: {}
   - uid: 13405
@@ -1288,7 +1288,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 25.5,-8.5
     - type: Drain
-      accumulator: 0.13575974
+      accumulator: 0.7013407
     - type: Fixtures
       fixtures: {}
   - uid: 13409
@@ -1298,7 +1298,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 25.5,-14.5
     - type: Drain
-      accumulator: 0.9363558
+      accumulator: 0.31402653
     - type: Fixtures
       fixtures: {}
   - uid: 13412
@@ -1308,7 +1308,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 25.5,-20.5
     - type: Drain
-      accumulator: 0.05970044
+      accumulator: 0.0046477425
     - type: Fixtures
       fixtures: {}
 - proto: MarkerWeatherblocker
@@ -8149,6 +8149,11 @@ entities:
     - type: Transform
       parent: 1
       pos: 45.5,-14.5
+  - uid: 768
+    components:
+    - type: Transform
+      parent: 1
+      pos: 20.5,-8.5
 - proto: N14BarricadeMetal
   entities:
   - uid: 51
@@ -8156,28 +8161,16 @@ entities:
     - type: Transform
       parent: 1
       rot: 3.141592653589793 rad
-      pos: 32.515858,-9.388211
+      pos: 32.4999,-9.334878
       anchored: false
     - type: Physics
       bodyType: Dynamic
-  - uid: 84
+  - uid: 759
     components:
     - type: Transform
       parent: 1
       rot: 3.141592653589793 rad
-      pos: 33.461052,-9.379166
-      anchored: false
-    - type: Physics
-      bodyType: Dynamic
-  - uid: 38988
-    components:
-    - type: Transform
-      parent: 1
-      rot: 3.141592653589793 rad
-      pos: 31.5742,-9.3923
-      anchored: false
-    - type: Physics
-      bodyType: Dynamic
+      pos: 31.5,-23.5
 - proto: N14BarricadeRazorwire
   entities:
   - uid: 67
@@ -8198,6 +8191,35 @@ entities:
     - type: Transform
       parent: 1
       pos: 32.5,-8.5
+  - uid: 762
+    components:
+    - type: Transform
+      parent: 1
+      pos: 31.5,-22.5
+  - uid: 763
+    components:
+    - type: Transform
+      parent: 1
+      rot: -1.5707963267948966 rad
+      pos: 32.5,-23.5
+  - uid: 764
+    components:
+    - type: Transform
+      parent: 1
+      rot: 1.5707963267948966 rad
+      pos: 30.5,-23.5
+  - uid: 765
+    components:
+    - type: Transform
+      parent: 1
+      rot: 1.5707963267948966 rad
+      pos: 30.5,-9.5
+  - uid: 766
+    components:
+    - type: Transform
+      parent: 1
+      rot: -1.5707963267948966 rad
+      pos: 34.5,-9.5
   - uid: 39109
     components:
     - type: Transform
@@ -8225,6 +8247,30 @@ entities:
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 33.5,-9.5
+  - uid: 84
+    components:
+    - type: Transform
+      parent: 1
+      rot: 3.141592653589793 rad
+      pos: 33.5,-9.5
+  - uid: 755
+    components:
+    - type: Transform
+      parent: 1
+      rot: 3.141592653589793 rad
+      pos: 31.5,-9.5
+  - uid: 760
+    components:
+    - type: Transform
+      parent: 1
+      rot: -1.5707963267948966 rad
+      pos: 32.5,-23.5
+  - uid: 761
+    components:
+    - type: Transform
+      parent: 1
+      rot: 1.5707963267948966 rad
+      pos: 30.5,-23.5
   - uid: 39260
     components:
     - type: Transform
@@ -8249,6 +8295,30 @@ entities:
       parent: 1
       rot: -1.5707963267948966 rad
       pos: 42.5,-27.5
+  - uid: 767
+    components:
+    - type: Transform
+      parent: 1
+      rot: 3.141592653589793 rad
+      pos: 22.5,-8.5
+  - uid: 769
+    components:
+    - type: Transform
+      parent: 1
+      rot: 3.141592653589793 rad
+      pos: 21.5,-14.5
+  - uid: 770
+    components:
+    - type: Transform
+      parent: 1
+      rot: 3.141592653589793 rad
+      pos: 21.5,-20.5
+  - uid: 771
+    components:
+    - type: Transform
+      parent: 1
+      rot: 3.141592653589793 rad
+      pos: 22.5,-27.5
   - uid: 39544
     components:
     - type: Transform
@@ -8433,6 +8503,12 @@ entities:
       pos: 31.1389,-19.8816
 - proto: N14ChairArmchair
   entities:
+  - uid: 756
+    components:
+    - type: Transform
+      parent: 1
+      rot: -1.5707963267948966 rad
+      pos: 37.613426,-26.55304
   - uid: 39796
     components:
     - type: Transform
@@ -8864,6 +8940,17 @@ entities:
     - type: Transform
       parent: 1
       pos: 30.7957,-15.1876
+- proto: N14FitnessWeightsBench1
+  entities:
+  - uid: 757
+    components:
+    - type: Transform
+      parent: 1
+      rot: 3.141592653589793 rad
+      pos: 34.879784,-21.00517
+      anchored: false
+    - type: Physics
+      bodyType: Dynamic
 - proto: N14FlagWallEnclave
   entities:
   - uid: 119
@@ -9128,12 +9215,6 @@ entities:
     - type: Transform
       parent: 1
       pos: 25.5,-7.5
-  - uid: 46184
-    components:
-    - type: Transform
-      parent: 1
-      rot: -1.5707963267948966 rad
-      pos: 34.5,-20.5
   - uid: 46185
     components:
     - type: Transform
@@ -9317,6 +9398,11 @@ entities:
     - type: Transform
       parent: 1
       pos: 29.5,-6.5
+  - uid: 758
+    components:
+    - type: Transform
+      parent: 1
+      pos: 37.5,-25.5
   - uid: 48714
     components:
     - type: Transform
@@ -9616,7 +9702,10 @@ entities:
     - type: Transform
       parent: 1
       rot: -1.5707963267948966 rad
-      pos: 35.5,-19.5
+      pos: 37.54282,-19.618902
+      anchored: false
+    - type: Physics
+      bodyType: Dynamic
   - uid: 61931
     components:
     - type: Transform

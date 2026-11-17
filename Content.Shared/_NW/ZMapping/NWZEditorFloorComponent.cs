@@ -9,4 +9,6 @@ public sealed partial class NWZEditorFloorComponent : Component
     [DataField] public string Project = "Building";
     [DataField] public int Depth;
     [DataField] public string Label = "Ground floor";
+    /// <summary>Native runtime export basename, persisted in the editable bundle.</summary>
+    [DataField] public string RuntimeFile = "";
 }
