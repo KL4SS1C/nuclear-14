@@ -142,6 +142,11 @@
   - type: Clickable
   - type: InteractionOutline
   - type: NWVehicleCabinAmmoFeed
+  - type: NWVehicleInspection
+  - type: UserInterface
+    interfaces:
+      enum.NWVehicleInspectionUiKey.Key:
+        type: NWVehicleInspectionBoundUserInterface
   - type: NWVehicleCabinFixture
 - type: entity
   id: NWvehicleCabinVehicleHumveeChassis

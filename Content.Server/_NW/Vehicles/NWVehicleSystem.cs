@@ -62,6 +62,7 @@ public sealed partial class NWVehicleSystem : EntitySystem
         InitializeCargo();
         InitializeImpact();
         InitializeCabins();
+        InitializeInspection();
         SubscribeLocalEvent<NWVehicleComponent, NWVehicleSetGearMessage>(OnSetGear);
         SubscribeLocalEvent<NWVehicleComponent, NWVehicleSetLightsMessage>(OnSetLights);
         SubscribeLocalEvent<NWVehicleComponent, NWVehicleTurretAimEvent>(OnMountedGunAim);
@@ -71,6 +72,7 @@ public sealed partial class NWVehicleSystem : EntitySystem
     {
         base.Update(frameTime);
         UpdateCabinViewers();
+        UpdateInspection();
         var query = EntityQueryEnumerator<NWVehicleComponent, NWGroundVehicleComponent, PhysicsComponent>();
         while (query.MoveNext(out var uid, out var vehicle, out var ground, out var physics))
         {

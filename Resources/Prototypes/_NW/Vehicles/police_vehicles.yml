@@ -1,0 +1,72 @@
+- type: entity
+  id: NWvehiclePoliceMonoSupron
+  parent: NWvehicleBoxVan
+  name: police Mono-Supron
+  description: A police transport with a walkable cabin, four seats and an individually
+    keyed ignition.
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/cop_car.rsi
+    offset: 0,0
+    layers:
+    - state: van_base
+    - state: wheels_0
+  - type: NWVehicle
+    seatCount: 4
+    cargoCapacity: 2
+  - type: NWGroundVehicle
+    wreckPrototype: NWvehiclePoliceMonoSupronWreck
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/police_cabin.yml
+    entryPoints:
+    - -1.3,1
+    - -1.3,1
+    - -1.3,1
+- type: entity
+  id: NWvehiclePoliceMonoSupronWreck
+  parent: NWvehicleBoxVanWreck
+  name: wrecked police Mono-Supron chassis
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/cop_car.rsi
+    offset: 0,0
+    layers:
+    - state: van_base
+    - state: wheels_0
+    - state: damaged_frame
+- type: entity
+  id: NWvehicleCMBPoliceVan
+  parent: NWvehicleBoxVan
+  name: CMB paddywagon
+  description: A police transport with a walkable cabin, four seats and an individually
+    keyed ignition.
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/marshalpaddywagon.rsi
+    offset: 0,0
+    layers:
+    - state: van_base
+    - state: wheels_1
+  - type: NWVehicle
+    seatCount: 4
+    cargoCapacity: 2
+  - type: NWGroundVehicle
+    wreckPrototype: NWvehicleCMBPoliceVanWreck
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/police_cabin.yml
+    entryPoints:
+    - -1.3,1
+    - -1.3,1
+    - -1.3,1
+- type: entity
+  id: NWvehicleCMBPoliceVanWreck
+  parent: NWvehicleBoxVanWreck
+  name: wrecked CMB paddywagon chassis
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/marshalpaddywagon.rsi
+    offset: 0,0
+    layers:
+    - state: van_base
+    - state: wheels_1
+    - state: damaged_frame

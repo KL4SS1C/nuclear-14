@@ -1,0 +1,73 @@
+- type: entity
+  abstract: true
+  id: NWPropTentBase
+  name: tent
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    noRot: true
+  - type: Physics
+    bodyType: Static
+    fixedRotation: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -1.5,-0.5,1.4,2
+        density: 190
+        layer:
+        - MachineLayer
+  - type: Sprite
+    sprite: _NW/Tents/tents.rsi
+    offset: 0, 1.5
+    drawdepth: Mobs
+  - type: DeleteOnExplosion
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger: !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts:
+        - Destruction
+  - type: Clickable
+  - type: InteractionOutline
+- type: entity
+  parent: NWPropTentBase
+  id: NWPropTentSmall
+  name: small tent
+  components:
+  - type: Sprite
+    state: small_tent
+- type: entity
+  parent: NWPropTentBase
+  id: NWPropTentMedical
+  name: medical tent
+  components:
+  - type: Sprite
+    state: medical_tent
+- type: entity
+  parent: NWPropTentBase
+  id: NWPropTentCommand
+  name: command tent
+  components:
+  - type: Sprite
+    state: command_tent
+- type: entity
+  parent: NWPropTentBase
+  id: NWPropTentSupply
+  name: supply tent
+  components:
+  - type: Sprite
+    state: supply_tent
+- type: entity
+  parent: NWPropTentBase
+  id: NWPropTentSmallBack
+  suffix: Back
+  name: small tent
+  components:
+  - type: Sprite
+    state: small_tent_back

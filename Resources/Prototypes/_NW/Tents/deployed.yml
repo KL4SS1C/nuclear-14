@@ -1,0 +1,431 @@
+- type: entity
+  abstract: true
+  parent: BaseStructure
+  id: NWTentBase
+  name: field tent
+  description: A canvas field shelter. Entrance faces south. Furnishings are supplied
+    separately.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Transform
+    anchored: false
+    noRot: true
+  - type: Sprite
+    sprite: _NW/Tents/deployed_tents.rsi
+    offset: 1,0
+    drawdepth: Overdoors
+    layers:
+    - state: standard_frame
+    - state: standard_canvas
+      color: '#ddcbc9'
+    - state: standard_roof
+      map:
+      - standard_roof
+      color: '#ddcbc9'
+  - type: InteractionTransparency
+  - type: NWTent
+    roofLayers:
+    - standard_roof
+  - type: Appearance
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -1.5,-2.5,-1.4,1.0
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+      fix-2:
+        shape: !type:PhysShapeAabb
+          bounds: 0.4,-2.5,0.5,1.0
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+      fix-3:
+        shape: !type:PhysShapeAabb
+          bounds: -1.5,0.4,0.5,1.5
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: CollisionWake
+    enabled: false
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger: !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts:
+        - Destruction
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+    fixedRotation: true
+  - type: ContainerContainer
+    containers:
+      nw-tent-kit: !type:Container {}
+- type: entity
+  parent: NWTentBase
+  id: NWTentStandard
+  name: field tent
+  description: A canvas field shelter. Entrance faces south. Furnishings are supplied
+    separately.
+  components: []
+- type: entity
+  parent: NWTentBase
+  id: NWTentBig
+  name: big tent
+  description: A canvas field shelter. Entrance faces south. Furnishings are supplied
+    separately.
+  components:
+  - type: Sprite
+    sprite: _NW/Tents/deployed_tents.rsi
+    layers:
+    - state: big_frame
+    - state: big_canvas
+      color: '#ddcbc9'
+    - state: big_roof
+      map:
+      - big_roof
+      color: '#ddcbc9'
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -1.5,-2.5,-1.4,1.0
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+      fix-2:
+        shape: !type:PhysShapeAabb
+          bounds: 1.4,-2.5,1.5,1.0
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+      fix-3:
+        shape: !type:PhysShapeAabb
+          bounds: -1.5,0.4,1.5,1.5
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+  - type: NWTent
+    footprint: -1.5,-2.5,1.5,1.5
+    roofLayers:
+    - big_roof
+- type: entity
+  parent: NWTentBase
+  id: NWTentStandardCommand
+  name: command tent
+  description: A canvas field shelter. Entrance faces south. Furnishings are supplied
+    separately.
+  components:
+  - type: Sprite
+    layers:
+    - state: standard_frame
+    - state: standard_canvas
+      color: '#ddcbc9'
+    - state: standard_roof
+      map:
+      - standard_roof
+      color: '#ddcbc9'
+    - state: cmd_standard_canvas
+    sprite: _NW/Tents/deployed_tents.rsi
+- type: entity
+  parent: NWTentBase
+  id: NWTentStandardMedical
+  name: medical tent
+  description: A canvas field shelter. Entrance faces south. Furnishings are supplied
+    separately.
+  components:
+  - type: Sprite
+    layers:
+    - state: standard_frame
+    - state: standard_canvas
+      color: '#ddcbc9'
+    - state: standard_roof
+      map:
+      - standard_roof
+      color: '#ddcbc9'
+    - state: med_standard_canvas
+    - state: med_standard_roof
+      map:
+      - med_standard_roof
+    sprite: _NW/Tents/deployed_tents.rsi
+  - type: NWTent
+    roofLayers:
+    - standard_roof
+    - med_standard_roof
+- type: entity
+  parent: NWTentBase
+  id: NWTentExtended
+  name: extended field tent
+  description: A canvas field shelter. Entrance faces south. Furnishings are supplied
+    separately.
+  components:
+  - type: Sprite
+    layers:
+    - state: standard_frame
+    - state: standard_canvas
+      color: '#ddcbc9'
+    - state: extension_frame
+    - state: extension_canvas
+      color: '#ddcbc9'
+    - state: standard_roof
+      map:
+      - standard_roof
+      color: '#ddcbc9'
+    - state: extension_roof
+      map:
+      - extension_roof
+      color: '#ddcbc9'
+    sprite: _NW/Tents/deployed_tents.rsi
+  - type: NWTent
+    roofLayers:
+    - standard_roof
+    - extension_roof
+    footprint: -1.5,-2.5,2.5,1.5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -1.5,-2.5,-1.4,1.0
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+      fix-2:
+        shape: !type:PhysShapeAabb
+          bounds: 0.4,-2.5,0.5,-1.5
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+      fix-3:
+        shape: !type:PhysShapeAabb
+          bounds: -1.5,0.4,2.5,1.5
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+      fix-4:
+        shape: !type:PhysShapeAabb
+          bounds: 2.4,-1.5,2.5,1.0
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+      fix-5:
+        shape: !type:PhysShapeAabb
+          bounds: 0.4,-1.5,2.5,-1.4
+        density: 20000
+        hard: true
+        mask:
+        - FullTileMask
+        layer:
+        - HighImpassable
+        - MidImpassable
+        - LowImpassable
+        - Opaque
+        - InteractImpassable
+- type: entity
+  parent: NWTentExtended
+  id: NWTentExtendedReq
+  name: requisitions tent
+  description: A canvas field shelter. Entrance faces south. Furnishings are supplied
+    separately.
+  components:
+  - type: Sprite
+    layers:
+    - state: standard_frame
+    - state: standard_canvas
+      color: '#ddcbc9'
+    - state: extension_frame
+    - state: extension_canvas
+      color: '#ddcbc9'
+    - state: standard_roof
+      map:
+      - standard_roof
+      color: '#ddcbc9'
+    - state: extension_roof
+      map:
+      - extension_roof
+      color: '#ddcbc9'
+    - state: req_extension_roof
+      map:
+      - req_extension_roof
+    sprite: _NW/Tents/deployed_tents.rsi
+  - type: NWTent
+    roofLayers:
+    - standard_roof
+    - extension_roof
+    - req_extension_roof
+- type: entity
+  parent: NWTentExtended
+  id: NWTentExtendedMess
+  name: mess tent
+  description: A canvas field shelter. Entrance faces south. Furnishings are supplied
+    separately.
+  components:
+  - type: Sprite
+    layers:
+    - state: standard_frame
+    - state: standard_canvas
+      color: '#ddcbc9'
+    - state: extension_frame
+    - state: extension_canvas
+      color: '#ddcbc9'
+    - state: standard_roof
+      map:
+      - standard_roof
+      color: '#ddcbc9'
+    - state: extension_roof
+      map:
+      - extension_roof
+      color: '#ddcbc9'
+    - state: mess_extension_roof
+      map:
+      - mess_extension_roof
+    sprite: _NW/Tents/deployed_tents.rsi
+  - type: NWTent
+    roofLayers:
+    - standard_roof
+    - extension_roof
+    - mess_extension_roof
+- type: entity
+  parent: NWTentExtended
+  id: NWTentExtendedMP
+  name: military police tent
+  description: A canvas field shelter. Entrance faces south. Furnishings are supplied
+    separately.
+  components:
+  - type: Sprite
+    layers:
+    - state: standard_frame
+    - state: standard_canvas
+      color: '#ddcbc9'
+    - state: extension_frame
+    - state: extension_canvas
+      color: '#ddcbc9'
+    - state: standard_roof
+      map:
+      - standard_roof
+      color: '#ddcbc9'
+    - state: extension_roof
+      map:
+      - extension_roof
+      color: '#ddcbc9'
+    - state: mp_extension_roof
+      map:
+      - mp_extension_roof
+    sprite: _NW/Tents/deployed_tents.rsi
+  - type: NWTent
+    roofLayers:
+    - standard_roof
+    - extension_roof
+    - mp_extension_roof
+- type: entity
+  parent: NWTentExtended
+  id: NWTentExtendedCorrespondent
+  name: correspondent field tent
+  description: A canvas field shelter. Entrance faces south. Furnishings are supplied
+    separately.
+  components:
+  - type: Sprite
+    layers:
+    - state: standard_frame
+    - state: standard_canvas
+      color: '#ddcbc9'
+    - state: extension_frame
+    - state: extension_canvas
+      color: '#ddcbc9'
+    - state: standard_roof
+      map:
+      - standard_roof
+      color: '#ddcbc9'
+    - state: extension_roof
+      map:
+      - extension_roof
+      color: '#ddcbc9'
+    - state: correspondent_extension_roof
+      map:
+      - correspondent_extension_roof
+    sprite: _NW/Tents/deployed_tents.rsi
+  - type: NWTent
+    roofLayers:
+    - standard_roof
+    - extension_roof
+    - correspondent_extension_roof

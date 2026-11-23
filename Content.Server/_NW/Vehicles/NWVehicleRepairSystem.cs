@@ -44,6 +44,13 @@ public sealed class NWVehicleRepairSystem : EntitySystem
         });
     }
 
+    public bool TryRepairFromPanel(EntityUid hull, EntityUid user, EntityUid tool)
+    {
+        if (!TryComp<NWVehicleRepairComponent>(hull, out var repair) ||
+            !_tool.HasQuality(tool, repair.QualityNeeded)) return false;
+        return StartRepair((hull, repair), user, tool);
+    }
+
     private bool Parked(EntityUid uid) =>
         TryComp<NWVehicleComponent>(uid, out var vehicle) && vehicle.State == NWVehicleState.Parked;
 

@@ -54,6 +54,11 @@ public abstract partial class SharedGunSystem
     /// </summary>
     private void OnChamberActivate(EntityUid uid, ChamberMagazineAmmoProviderComponent component, ActivateInWorldEvent args)
     {
+        // NW vehicle activation boards/inspects the hull. It is never a bolt command.
+        // Keep this shared guard so client prediction cannot rack the exterior gun.
+        if (HasComp<Content.Shared._NW.Vehicles.NWVehicleComponent>(uid))
+            return;
+
         if (args.Handled || !args.Complex)
             return;
 
@@ -426,3 +431,4 @@ public abstract partial class SharedGunSystem
         }
     }
 }
+

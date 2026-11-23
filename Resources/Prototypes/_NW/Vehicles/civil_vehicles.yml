@@ -1,0 +1,231 @@
+- type: entity
+  id: NWvehicleCivilianMedicalTruck
+  parent: NWvehicleBoxVan
+  name: small civilian medical truck
+  description: A civilian transport with an individually keyed ignition and a walkable
+    cabin.
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/small_truck_medical.rsi
+    offset: 0,0
+    layers:
+    - state: small_truck_medical
+    - state: wheels_0
+  - type: NWVehicle
+    seatCount: 2
+    cargoCapacity: 2
+  - type: NWGroundVehicle
+    wreckPrototype: NWvehicleCivilianMedicalTruckWreck
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/civil_truck.yml
+    entryPoints:
+    - 3.5,-1
+    - 3.5,-1
+    - 3.5,-1
+- type: entity
+  id: NWvehicleCivilianMedicalTruckWreck
+  parent: NWvehicleBoxVanWreck
+  name: wrecked small civilian medical truck chassis
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/small_truck_medical.rsi
+    offset: 0,0
+    layers:
+    - state: small_truck_medical
+    - state: wheels_1
+    - state: damaged_frame
+- type: entity
+  id: NWvehicleCivilianTruck
+  parent: NWvehicleBoxVan
+  name: small civilian truck
+  description: A civilian transport with an individually keyed ignition and a walkable
+    cabin.
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/civtruck.rsi
+    offset: 0,0
+    layers:
+    - state: civtruck_1
+    - state: wheels_0
+  - type: NWVehicle
+    seatCount: 2
+    cargoCapacity: 2
+  - type: NWGroundVehicle
+    wreckPrototype: NWvehicleCivilianTruckWreck
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/civil_truck.yml
+    entryPoints:
+    - 3.5,-1
+    - 3.5,-1
+    - 3.5,-1
+- type: entity
+  id: NWvehicleCivilianTruckWreck
+  parent: NWvehicleBoxVanWreck
+  name: wrecked small civilian truck chassis
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/civtruck.rsi
+    offset: 0,0
+    layers:
+    - state: civtruck_1
+    - state: wheels_1
+    - state: damaged_frame
+- type: entity
+  id: NWvehicleGarbageTruck
+  parent: NWvehicleBoxVan
+  name: small garbage truck
+  description: A civilian transport with an individually keyed ignition and a walkable
+    cabin.
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/small_truck_garbage.rsi
+    offset: 0,0
+    layers:
+    - state: small_truck_garbage
+    - state: wheels_0
+  - type: NWVehicle
+    seatCount: 2
+    cargoCapacity: 2
+  - type: NWGroundVehicle
+    wreckPrototype: NWvehicleGarbageTruckWreck
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/civil_truck.yml
+    entryPoints:
+    - 3.5,-1
+    - 3.5,-1
+    - 3.5,-1
+- type: entity
+  id: NWvehicleGarbageTruckWreck
+  parent: NWvehicleBoxVanWreck
+  name: wrecked small garbage truck chassis
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/small_truck_garbage.rsi
+    offset: 0,0
+    layers:
+    - state: small_truck_garbage
+    - state: wheels_1
+    - state: damaged_frame
+- type: entity
+  id: NWvehicleWeYuCivilianTruck
+  parent: NWvehicleBoxVan
+  name: small We-Yu civilian truck
+  description: A civilian transport with an individually keyed ignition and a walkable
+    cabin.
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/civtruck.rsi
+    offset: 0,0
+    layers:
+    - state: civtruck_2
+    - state: wheels_0
+  - type: NWVehicle
+    seatCount: 2
+    cargoCapacity: 2
+  - type: NWGroundVehicle
+    wreckPrototype: NWvehicleWeYuCivilianTruckWreck
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/civil_truck.yml
+    entryPoints:
+    - 3.5,-1
+    - 3.5,-1
+    - 3.5,-1
+- type: entity
+  id: NWvehicleWeYuCivilianTruckWreck
+  parent: NWvehicleBoxVanWreck
+  name: wrecked small We-Yu civilian truck chassis
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/civtruck.rsi
+    offset: 0,0
+    layers:
+    - state: civtruck_2
+    - state: wheels_1
+    - state: damaged_frame
+- type: entity
+  id: NWvehicleWhiteCivilianTruck
+  parent: NWvehicleBoxVan
+  name: small white civilian truck
+  description: A civilian transport with an individually keyed ignition and a walkable
+    cabin.
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/civtruck.rsi
+    offset: 0,0
+    layers:
+    - state: civtruck_3
+    - state: wheels_0
+  - type: NWVehicle
+    seatCount: 2
+    cargoCapacity: 2
+  - type: NWGroundVehicle
+    wreckPrototype: NWvehicleWhiteCivilianTruckWreck
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/civil_truck.yml
+    entryPoints:
+    - 3.5,-1
+    - 3.5,-1
+    - 3.5,-1
+- type: entity
+  id: NWvehicleWhiteCivilianTruckWreck
+  parent: NWvehicleBoxVanWreck
+  name: wrecked small white civilian truck chassis
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/civtruck.rsi
+    offset: 0,0
+    layers:
+    - state: civtruck_3
+    - state: wheels_1
+    - state: damaged_frame
+- type: entity
+  id: NWvehicleAmbulance
+  parent: NWvehicleBoxVan
+  name: ambulance
+  description: A civilian transport with an individually keyed ignition and a walkable
+    cabin.
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/ambulance.rsi
+    offset: 0,0
+    layers:
+    - state: van_base
+    - state: wheels_0
+  - type: NWVehicle
+    seatCount: 3
+    cargoCapacity: 2
+  - type: NWGroundVehicle
+    wreckPrototype: NWvehicleAmbulanceWreck
+  - type: NWVehicleCabin
+    interiorPath: /Maps/_NW/Vehicles/ambulance.yml
+    entryPoints:
+    - -1.3,1
+    - -1.3,1
+    - -1.3,1
+- type: entity
+  id: NWvehicleAmbulanceWreck
+  parent: NWvehicleBoxVanWreck
+  name: wrecked ambulance chassis
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/ambulance.rsi
+    offset: 0,0
+    layers:
+    - state: van_base
+    - state: wheels_1
+    - state: damaged_frame
+- type: entity
+  id: NWvehicleCabinAmbulanceCot
+  parent: NWvehicleCabinCMSeatPassenger
+  name: ambulance cot
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: Sprite
+    sprite: _NW/Vehicles/Interiors/ambulance_bed.rsi
+    state: bed
+    noRot: true
+  - type: Strap
+    position: Down
+    rotation: -90
+    buckleOffset: 0,0

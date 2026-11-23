@@ -1,7 +1,7 @@
 - type: entity
   id: ActionNWVehicleReadyGun
-  name: Ready mounted gun
-  description: Close the bolt and chamber a round from the loaded magazine. Requires the gunner's seat.
+  name: Close weapon bolt
+  description: Manually close the mounted weapon's bolt and chamber a round. Loading ammunition does not close the bolt. Requires the gunner's seat.
   categories: [HideSpawnMenu]
   components:
   - type: InstantAction
