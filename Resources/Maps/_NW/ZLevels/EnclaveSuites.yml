@@ -2,9 +2,9 @@ meta:
   format: 7
   category: Map
   engineVersion: 286.0.0
-  forkId: ''
-  forkVersion: ''
-  time: 11/17/2026 15:34:15
+  forkId: ""
+  forkVersion: ""
+  time: 11/18/2026 17:50:20
   entityCount: 2403
 maps:
 - 1
@@ -218,7 +218,7 @@ tilemap:
   260: WaterRiver
   1: WaterShallow
 entities:
-- proto: ''
+- proto: ""
   entities:
   - uid: 1
     components:
@@ -226,7 +226,7 @@ entities:
       name: Enclave Hotel — Suites
     - type: Transform
     - type: Map
-      mapPaused: true
+      mapPaused: True
     - type: GridTree
     - type: Broadphase
     - type: OccluderTree
@@ -250,10 +250,10 @@ entities:
           version: 7
     - type: GridPathfinding
     - type: Gravity
-      inherent: true
+      inherent: True
       gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg
-      enabled: true
+      enabled: True
     - type: DecalGrid
       chunkCollection:
         version: 2
@@ -261,7 +261,7 @@ entities:
     - type: MapLight
       ambientLightColor: '#BBBBBBFF'
     - type: MapAtmosphere
-      space: false
+      space: False
       mixture:
         temperature: 293.15
         volume: 2500
@@ -278,7 +278,7 @@ entities:
         - 0
         - 0
         - 0
-        immutable: true
+        immutable: True
     - type: RadiationGridResistance
     - type: NavMap
     - type: BecomesStation
@@ -1597,7 +1597,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 46.5,-28.5
-      anchored: false
+      anchored: False
   - uid: 1580
     components:
     - type: Transform
@@ -2079,7 +2079,7 @@ entities:
       parent: 1
       rot: 3.141592653589793 rad
       pos: 28.1776,-18.8309
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
     - type: Fixtures
@@ -2096,7 +2096,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 33.3914,-17.9514
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
     - type: Fixtures
@@ -2107,7 +2107,7 @@ entities:
       parent: 1
       rot: 3.141592653589793 rad
       pos: 34.8615,-18.7009
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
     - type: Fixtures
@@ -2145,7 +2145,7 @@ entities:
       parent: 1
       rot: 3.141592653589793 rad
       pos: 31.0589,-9.0368
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
     - type: Fixtures
@@ -2156,7 +2156,7 @@ entities:
       parent: 1
       rot: -1.5707963267948966 rad
       pos: 30.3046,-7.27283
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
     - type: Fixtures
@@ -2167,7 +2167,7 @@ entities:
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 30.7116,-6.97974
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
     - type: Fixtures
@@ -2219,7 +2219,7 @@ entities:
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 32.1009,-8.4452
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
     - type: Fixtures
@@ -2232,7 +2232,7 @@ entities:
       parent: 1
       rot: -1.5707963267948966 rad
       pos: 33.0072,-7.80475
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
     - type: Fixtures
@@ -2243,7 +2243,7 @@ entities:
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 32.3777,-8.8197
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
     - type: Fixtures
@@ -2253,7 +2253,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 31.0644,-8.66772
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
     - type: Fixtures
@@ -2318,11 +2318,11 @@ entities:
       parent: 1
       rot: -1.5707963267948966 rad
       pos: 20.0136,-15.99
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
     - type: Drain
-      accumulator: 0.27530318
+      accumulator: 0.5748869
     - type: Fixtures
       fixtures: {}
   - uid: 13407
@@ -2331,11 +2331,11 @@ entities:
       parent: 1
       rot: -1.5707963267948966 rad
       pos: 45.0208,-6.9607
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
     - type: Drain
-      accumulator: 0.16615005
+      accumulator: 0.771902
     - type: Fixtures
       fixtures: {}
   - uid: 13411
@@ -2344,11 +2344,11 @@ entities:
       parent: 1
       rot: -1.5707963267948966 rad
       pos: 43.9948,-15.9347
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
     - type: Drain
-      accumulator: 0.060535364
+      accumulator: 0.8134885
     - type: Fixtures
       fixtures: {}
 - proto: Magazine308M60Box
@@ -2601,7 +2601,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 18.5,-28.5
-      anchored: false
+      anchored: False
   - uid: 56
     components:
     - type: Transform
@@ -6237,7 +6237,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 46.5,-28.5
-      anchored: false
+      anchored: False
   - uid: 17968
     components:
     - type: Transform
@@ -6253,7 +6253,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 46.5,-28.5
-      anchored: false
+      anchored: False
   - uid: 17984
     components:
     - type: Transform
@@ -6359,7 +6359,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 46.5,-2.5
-      anchored: false
+      anchored: False
   - uid: 19388
     components:
     - type: Transform
@@ -9580,7 +9580,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 18.5,-28.5
-      anchored: false
+      anchored: False
   - uid: 20037
     components:
     - type: Transform
@@ -9691,7 +9691,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 18.5,-2.5
-      anchored: false
+      anchored: False
   - uid: 20059
     components:
     - type: Transform
@@ -9720,7 +9720,7 @@ entities:
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 35.64652,-18.449444
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
 - proto: MisfitsShelfMetalMaterials10
@@ -9731,7 +9731,7 @@ entities:
       parent: 1
       rot: -1.5707963267948966 rad
       pos: 27.365162,-17.554266
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
 - proto: N14AccessConfigurator
@@ -9776,7 +9776,7 @@ entities:
       parent: 1
       pos: 38.5,-12.5
     - type: Apc
-      hasAccess: true
+      hasAccess: True
 - proto: N14BarricadeMetalGreen
   entities:
   - uid: 39015
@@ -10172,7 +10172,7 @@ entities:
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 40.9872,-23.9014
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
   - uid: 40588
@@ -10353,7 +10353,7 @@ entities:
       parent: 1
       rot: 3.141592653589793 rad
       pos: 22.4911,-10.9035
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
   - uid: 43278
@@ -11107,7 +11107,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 27.1856,-17.6342
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
   - uid: 47710
@@ -11115,7 +11115,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 34.8412,-17.5141
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
 - proto: N14Shower
@@ -11209,7 +11209,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 31.5121,-5.37723
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
 - proto: N14TableCounterMetal
@@ -11286,7 +11286,7 @@ entities:
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 20.2489,-8.58633
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
   - uid: 48840
@@ -11295,7 +11295,7 @@ entities:
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 20.2437,-7.25766
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
   - uid: 48842
@@ -11304,7 +11304,7 @@ entities:
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 19.2502,-21.325
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
   - uid: 48843
@@ -11313,7 +11313,7 @@ entities:
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 19.2505,-22.894
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
   - uid: 48844
@@ -11322,7 +11322,7 @@ entities:
       parent: 1
       rot: -1.5707963267948966 rad
       pos: 45.7519,-21.426
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
   - uid: 48845
@@ -11331,7 +11331,7 @@ entities:
       parent: 1
       rot: -1.5707963267948966 rad
       pos: 45.7537,-22.8475
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
 - proto: N14TableWoodenOvalWide
@@ -11342,7 +11342,7 @@ entities:
       parent: 1
       rot: 3.141592653589793 rad
       pos: 31.9626,-7.89868
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
   - uid: 48849
@@ -11351,7 +11351,7 @@ entities:
       parent: 1
       rot: -1.5707963267948966 rad
       pos: 40.9371,-23.2246
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
 - proto: N14TelevisionRedwood
@@ -11361,7 +11361,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 23.0333,-26.0331
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
   - uid: 48920
@@ -11369,7 +11369,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 40.4958,-25.7346
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
 - proto: N14Toilet
@@ -11399,182 +11399,182 @@ entities:
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 46.5,5.5
-      anchored: false
+      anchored: False
   - uid: 843
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 46.5,4.5
-      anchored: false
+      anchored: False
   - uid: 844
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 47.5,4.5
-      anchored: false
+      anchored: False
   - uid: 845
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 48.5,4.5
-      anchored: false
+      anchored: False
   - uid: 846
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 49.5,4.5
-      anchored: false
+      anchored: False
   - uid: 847
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 50.5,4.5
-      anchored: false
+      anchored: False
   - uid: 848
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 51.5,4.5
-      anchored: false
+      anchored: False
   - uid: 849
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 51.5,4.5
-      anchored: false
+      anchored: False
   - uid: 850
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 51.5,5.5
-      anchored: false
+      anchored: False
   - uid: 851
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 51.5,6.5
-      anchored: false
+      anchored: False
   - uid: 852
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 51.5,7.5
-      anchored: false
+      anchored: False
   - uid: 853
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 50.5,5.5
-      anchored: false
+      anchored: False
   - uid: 854
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 49.5,5.5
-      anchored: false
+      anchored: False
   - uid: 855
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 48.5,5.5
-      anchored: false
+      anchored: False
   - uid: 856
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 47.5,5.5
-      anchored: false
+      anchored: False
   - uid: 857
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 46.5,6.5
-      anchored: false
+      anchored: False
   - uid: 858
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 46.5,6.5
-      anchored: false
+      anchored: False
   - uid: 859
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 47.5,6.5
-      anchored: false
+      anchored: False
   - uid: 860
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 48.5,6.5
-      anchored: false
+      anchored: False
   - uid: 861
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 49.5,6.5
-      anchored: false
+      anchored: False
   - uid: 862
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 50.5,6.5
-      anchored: false
+      anchored: False
   - uid: 863
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 50.5,7.5
-      anchored: false
+      anchored: False
   - uid: 864
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 49.5,7.5
-      anchored: false
+      anchored: False
   - uid: 865
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 48.5,7.5
-      anchored: false
+      anchored: False
   - uid: 866
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 47.5,7.5
-      anchored: false
+      anchored: False
   - uid: 867
     components:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
       pos: 46.5,7.5
-      anchored: false
+      anchored: False
   - uid: 50839
     components:
     - type: Transform
@@ -13161,7 +13161,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 29.3442,-18.0436
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
 - proto: N14WorkbenchArmorbench
@@ -13171,7 +13171,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 28.5146,-14.3587
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
 - proto: N14WorkbenchChemistryset
@@ -13209,7 +13209,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 33.5265,-14.3919
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
 - proto: N14WorkbenchWeaponbench
@@ -13220,7 +13220,7 @@ entities:
       parent: 1
       rot: 3.141592653589793 rad
       pos: 28.5076,-16.6917
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
 - proto: NWClothingHeadHatEnclaveReconHelmet
@@ -13482,6 +13482,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 30.0586,-5.53973
-      anchored: false
+      anchored: False
     - type: Physics
       bodyType: Dynamic
+...
