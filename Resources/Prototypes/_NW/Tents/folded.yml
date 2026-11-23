@@ -1,0 +1,177 @@
+- type: entity
+  parent: BaseItem
+  id: NWTentStandardFolded
+  name: folded field tent
+  description: A folded canvas tent. Activate in hand with clear ground to the north
+    to deploy. Packing takes ten seconds.
+  components:
+  - type: Item
+    size: Huge
+  - type: Sprite
+    sprite: _NW/Tents/folded_tents.rsi
+    layers:
+    - state: base_tent
+  - type: NWTentKit
+    tent: NWTentStandard
+    footprint: -1.5,-2.5,0.5,1.5
+  - type: ContainerContainer
+    containers:
+      nw-packed-tent: !type:Container {}
+- type: entity
+  parent: BaseItem
+  id: NWTentBigFolded
+  name: folded big tent
+  description: A folded canvas tent. Activate in hand with clear ground to the north
+    to deploy. Packing takes ten seconds.
+  components:
+  - type: Item
+    size: Huge
+  - type: Sprite
+    layers:
+    - state: base_tent
+    sprite: _NW/Tents/folded_tents.rsi
+  - type: NWTentKit
+    tent: NWTentBig
+    footprint: -1.5,-2.5,1.5,1.5
+  - type: ContainerContainer
+    containers:
+      nw-packed-tent: !type:Container {}
+- type: entity
+  parent: BaseItem
+  id: NWTentStandardCommandFolded
+  name: folded command tent
+  description: A folded canvas tent. Activate in hand with clear ground to the north
+    to deploy. Packing takes ten seconds.
+  components:
+  - type: Item
+    size: Huge
+  - type: Sprite
+    sprite: _NW/Tents/folded_tents.rsi
+    layers:
+    - state: base_tent
+    - state: cmd_base
+  - type: NWTentKit
+    tent: NWTentStandardCommand
+    footprint: -1.5,-2.5,0.5,1.5
+  - type: ContainerContainer
+    containers:
+      nw-packed-tent: !type:Container {}
+- type: entity
+  parent: BaseItem
+  id: NWTentStandardMedicalFolded
+  name: folded medical tent
+  description: A folded canvas tent. Activate in hand with clear ground to the north
+    to deploy. Packing takes ten seconds.
+  components:
+  - type: Item
+    size: Huge
+  - type: Sprite
+    sprite: _NW/Tents/folded_tents.rsi
+    layers:
+    - state: base_tent
+    - state: med_base
+  - type: NWTentKit
+    tent: NWTentStandardMedical
+    footprint: -1.5,-2.5,0.5,1.5
+  - type: ContainerContainer
+    containers:
+      nw-packed-tent: !type:Container {}
+- type: entity
+  parent: BaseItem
+  id: NWTentExtendedFolded
+  name: folded extended field tent
+  description: A folded canvas tent. Activate in hand with clear ground to the north
+    to deploy. Packing takes ten seconds.
+  components:
+  - type: Item
+    size: Huge
+  - type: Sprite
+    sprite: _NW/Tents/folded_tents.rsi
+    layers:
+    - state: big_tent
+  - type: NWTentKit
+    tent: NWTentExtended
+    footprint: -1.5,-2.5,2.5,1.5
+  - type: ContainerContainer
+    containers:
+      nw-packed-tent: !type:Container {}
+- type: entity
+  parent: BaseItem
+  id: NWTentExtendedReqFolded
+  name: folded requisitions tent
+  description: A folded canvas tent. Activate in hand with clear ground to the north
+    to deploy. Packing takes ten seconds.
+  components:
+  - type: Item
+    size: Huge
+  - type: Sprite
+    sprite: _NW/Tents/folded_tents.rsi
+    layers:
+    - state: big_tent
+    - state: req_big
+  - type: NWTentKit
+    tent: NWTentExtendedReq
+    footprint: -1.5,-2.5,2.5,1.5
+  - type: ContainerContainer
+    containers:
+      nw-packed-tent: !type:Container {}
+- type: entity
+  parent: BaseItem
+  id: NWTentExtendedMessFolded
+  name: folded mess tent
+  description: A folded canvas tent. Activate in hand with clear ground to the north
+    to deploy. Packing takes ten seconds.
+  components:
+  - type: Item
+    size: Huge
+  - type: Sprite
+    sprite: _NW/Tents/folded_tents.rsi
+    layers:
+    - state: big_tent
+    - state: mess_big
+  - type: NWTentKit
+    tent: NWTentExtendedMess
+    footprint: -1.5,-2.5,2.5,1.5
+  - type: ContainerContainer
+    containers:
+      nw-packed-tent: !type:Container {}
+- type: entity
+  parent: BaseItem
+  id: NWTentExtendedMPFolded
+  name: folded military police tent
+  description: A folded canvas tent. Activate in hand with clear ground to the north
+    to deploy. Packing takes ten seconds.
+  components:
+  - type: Item
+    size: Huge
+  - type: Sprite
+    sprite: _NW/Tents/folded_tents.rsi
+    layers:
+    - state: big_tent
+    - state: mp_big
+  - type: NWTentKit
+    tent: NWTentExtendedMP
+    footprint: -1.5,-2.5,2.5,1.5
+  - type: ContainerContainer
+    containers:
+      nw-packed-tent: !type:Container {}
+- type: entity
+  parent: BaseItem
+  id: NWTentExtendedCorrespondentFolded
+  name: folded correspondent field tent
+  description: A folded canvas tent. Activate in hand with clear ground to the north
+    to deploy. Packing takes ten seconds.
+  components:
+  - type: Item
+    size: Huge
+  - type: Sprite
+    sprite: _NW/Tents/folded_tents.rsi
+    layers:
+    - state: big_tent
+    - state: correspondent_big
+  - type: NWTentKit
+    tent: NWTentExtendedCorrespondent
+    footprint: -1.5,-2.5,2.5,1.5
+  - type: ContainerContainer
+    containers:
+      nw-packed-tent: !type:Container {}

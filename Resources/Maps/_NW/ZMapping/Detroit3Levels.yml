@@ -10,7 +10,11 @@ floors:
       engineVersion: 286.0.0
       forkId: ""
       forkVersion: ""
+<<<<<<< Updated upstream
       time: 11/17/2026 15:34:15
+=======
+      time: 11/17/2026 01:20:28
+>>>>>>> Stashed changes
       entityCount: 65022
     maps:
     - 1
@@ -271404,6 +271408,7 @@ floors:
           markerLayers: []
           loadedMarkers: {}
           entities:
+<<<<<<< Updated upstream
             8,-8: {}
             32,-8: {}
             32,-16: {}
@@ -271649,6 +271654,253 @@ floors:
           - 8,16
           - 56,-40
           - 40,-40
+=======
+            64,8: {}
+            56,8: {}
+            48,8: {}
+            40,8: {}
+            64,16: {}
+            32,8: {}
+            24,8: {}
+            56,16: {}
+            64,24: {}
+            48,16: {}
+            40,0: {}
+            40,16: {}
+            40,-8: {}
+            56,24: {}
+            40,-32: {}
+            48,24: {}
+            40,24: {}
+            32,-8: {}
+            40,-16: {}
+            32,24: {}
+            32,-32: {}
+            40,-24: {}
+            24,-8: {}
+            24,24: {}
+            16,24: {}
+            8,24: {}
+            0,24: {}
+            8,16: {}
+            16,-8: {}
+            32,-16: {}
+            16,8: {}
+            24,-32: {}
+            32,-24: {}
+            8,8: {}
+            64,0: {}
+            8,0: {}
+            64,-8: {}
+            32,0: {}
+            64,-16: {}
+            48,0: {}
+            8,-8: {}
+            24,-16: {}
+            16,-32: {}
+            24,-24: {}
+            48,-8: {}
+            64,-24: {}
+            64,-40: {}
+            64,-32: {}
+            24,0: {}
+            48,-16: {}
+            56,-40: {}
+            16,-16: {}
+            16,-24: {}
+            48,-24: {}
+            0,16: {}
+            48,-32: {}
+            16,0: {}
+            8,-16: {}
+            48,-40: {}
+            0,8: {}
+            56,0: {}
+            56,-8: {}
+            40,-40: {}
+            56,-16: {}
+            0,0: {}
+            32,16: {}
+            24,16: {}
+            0,-8: {}
+            0,-16: {}
+            0,-24: {}
+            32,-40: {}
+            56,-24: {}
+            16,16: {}
+            0,-32: {}
+            8,-24: {}
+            24,-40: {}
+            16,-40: {}
+            8,-40: {}
+            0,-40: {}
+            56,-32: {}
+            8,-32: {}
+          decals:
+            64,8: {}
+            56,8: {}
+            48,8: {}
+            40,8: {}
+            64,16: {}
+            32,8: {}
+            24,8: {}
+            56,16: {}
+            64,24: {}
+            48,16: {}
+            40,0: {}
+            40,16: {}
+            40,-8: {}
+            56,24: {}
+            40,-32: {}
+            48,24: {}
+            40,24: {}
+            32,-8: {}
+            40,-16: {}
+            32,24: {}
+            32,-32: {}
+            40,-24: {}
+            24,-8: {}
+            24,24: {}
+            16,24: {}
+            8,24: {}
+            0,24: {}
+            8,16: {}
+            16,-8: {}
+            32,-16: {}
+            16,8: {}
+            24,-32: {}
+            32,-24: {}
+            8,8: {}
+            64,0: {}
+            8,0: {}
+            64,-8: {}
+            32,0: {}
+            64,-16: {}
+            48,0: {}
+            8,-8: {}
+            24,-16: {}
+            16,-32: {}
+            24,-24: {}
+            48,-8: {}
+            64,-24: {}
+            64,-40: {}
+            64,-32: {}
+            24,0: {}
+            48,-16: {}
+            56,-40: {}
+            16,-16: {}
+            16,-24: {}
+            48,-24: {}
+            0,16: {}
+            48,-32: {}
+            16,0: {}
+            8,-16: {}
+            48,-40: {}
+            0,8: {}
+            56,0: {}
+            56,-8: {}
+            40,-40: {}
+            56,-16: {}
+            0,0: {}
+            32,16: {}
+            24,16: {}
+            0,-8: {}
+            0,-16: {}
+            0,-24: {}
+            32,-40: {}
+            56,-24: {}
+            16,16: {}
+            0,-32: {}
+            8,-24: {}
+            24,-40: {}
+            16,-40: {}
+            8,-40: {}
+            0,-40: {}
+            56,-32: {}
+            8,-32: {}
+          loadedChunks:
+          - 64,8
+          - 56,8
+          - 48,8
+          - 40,8
+          - 64,16
+          - 32,8
+          - 24,8
+          - 56,16
+          - 64,24
+          - 48,16
+          - 40,0
+          - 40,16
+          - 40,-8
+          - 56,24
+          - 40,-32
+          - 48,24
+          - 40,24
+          - 32,-8
+          - 40,-16
+          - 32,24
+          - 32,-32
+          - 40,-24
+          - 24,-8
+          - 24,24
+          - 16,24
+          - 8,24
+          - 0,24
+          - 8,16
+          - 16,-8
+          - 32,-16
+          - 16,8
+          - 24,-32
+          - 32,-24
+          - 8,8
+          - 64,0
+          - 8,0
+          - 64,-8
+          - 32,0
+          - 64,-16
+          - 48,0
+          - 8,-8
+          - 24,-16
+          - 16,-32
+          - 24,-24
+          - 48,-8
+          - 64,-24
+          - 64,-40
+          - 64,-32
+          - 24,0
+          - 48,-16
+          - 56,-40
+          - 16,-16
+          - 16,-24
+          - 48,-24
+          - 0,16
+          - 48,-32
+          - 16,0
+          - 8,-16
+          - 48,-40
+          - 0,8
+          - 56,0
+          - 56,-8
+          - 40,-40
+          - 56,-16
+          - 0,0
+          - 32,16
+          - 24,16
+          - 0,-8
+          - 0,-16
+          - 0,-24
+          - 32,-40
+          - 56,-24
+          - 16,16
+          - 0,-32
+          - 8,-24
+          - 24,-40
+          - 16,-40
+          - 8,-40
+          - 0,-40
+          - 56,-32
+          - 8,-32
+>>>>>>> Stashed changes
           layers:
           - !type:BiomeDecalLayer
             threshold: -0.5
@@ -347286,7 +347538,11 @@ floors:
           parent: 1
           pos: -256.5,-43.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.086840115
+=======
+          accumulator: 0.42390987
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 13414
@@ -347295,7 +347551,11 @@ floors:
           parent: 1
           pos: 148.5,141.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.4431808
+=======
+          accumulator: 0.84237444
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 13415
@@ -347304,7 +347564,11 @@ floors:
           parent: 1
           pos: 244.5,-82.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.37353066
+=======
+          accumulator: 0.5626211
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 13416
@@ -347313,7 +347577,11 @@ floors:
           parent: 1
           pos: -7.5,126.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.458428
+=======
+          accumulator: 0.9622711
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 13417
@@ -347322,7 +347590,11 @@ floors:
           parent: 1
           pos: -321.5,-34.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.15153526
+=======
+          accumulator: 0.44951326
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 13418
@@ -347331,7 +347603,11 @@ floors:
           parent: 1
           pos: -92.5,103.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.17650826
+=======
+          accumulator: 0.25433278
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 13419
@@ -347340,7 +347616,11 @@ floors:
           parent: 1
           pos: -87.5,103.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.43162605
+=======
+          accumulator: 0.036110483
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 13420
@@ -347349,7 +347629,11 @@ floors:
           parent: 1
           pos: -84.5,115.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.33229244
+=======
+          accumulator: 0.8006766
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 13421
@@ -347358,7 +347642,11 @@ floors:
           parent: 1
           pos: -107.5,115.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.38229832
+=======
+          accumulator: 0.29415596
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 13422
@@ -347367,7 +347655,11 @@ floors:
           parent: 1
           pos: -72.5,115.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.5480718
+=======
+          accumulator: 0.57524115
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 64950
@@ -347376,7 +347668,11 @@ floors:
           parent: 1
           pos: -28.5,-129.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.2610081
+=======
+          accumulator: 0.85220045
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 67053
@@ -347389,7 +347685,11 @@ floors:
         - type: Physics
           bodyType: Dynamic
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.79237354
+=======
+          accumulator: 0.58216673
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 67419
@@ -347399,7 +347699,11 @@ floors:
           rot: 1.5707963267948966 rad
           pos: -56.5,-111.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.22044915
+=======
+          accumulator: 0.44385546
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 67731
@@ -347409,7 +347713,11 @@ floors:
           rot: -1.5707963267948966 rad
           pos: -39.5,-98.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.41965708
+=======
+          accumulator: 0.62628907
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 68646
@@ -347418,7 +347726,11 @@ floors:
           parent: 1
           pos: -34.5,-132.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.85182756
+=======
+          accumulator: 0.7359286
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
     - proto: FloorSnowChasm
@@ -516232,7 +516544,11 @@ floors:
           pos: -2.5,-22.5
         - type: Door
           state: Opening
+<<<<<<< Updated upstream
           secondsUntilStateChange: -101264.9
+=======
+          secondsUntilStateChange: -100634.93
+>>>>>>> Stashed changes
       - uid: 43161
         components:
         - type: Transform
@@ -516739,7 +517055,11 @@ floors:
           pos: -24.5,-66.5
         - type: Door
           state: Opening
+<<<<<<< Updated upstream
           secondsUntilStateChange: -29452.443
+=======
+          secondsUntilStateChange: -28822.47
+>>>>>>> Stashed changes
       - uid: 64897
         components:
         - type: Transform
@@ -516994,7 +517314,11 @@ floors:
           pos: 26.5,-6.5
         - type: Door
           state: Opening
+<<<<<<< Updated upstream
           secondsUntilStateChange: -141497.56
+=======
+          secondsUntilStateChange: -140867.58
+>>>>>>> Stashed changes
       - uid: 43274
         components:
         - type: Transform
@@ -517003,7 +517327,11 @@ floors:
           pos: 26.5,-4.5
         - type: Door
           state: Opening
+<<<<<<< Updated upstream
           secondsUntilStateChange: -141496.9
+=======
+          secondsUntilStateChange: -140866.92
+>>>>>>> Stashed changes
       - uid: 43275
         components:
         - type: Transform
@@ -639562,8 +639890,13 @@ floors:
       engineVersion: 286.0.0
       forkId: ""
       forkVersion: ""
+<<<<<<< Updated upstream
       time: 11/17/2026 15:34:15
       entityCount: 2520
+=======
+      time: 11/17/2026 01:20:28
+      entityCount: 2437
+>>>>>>> Stashed changes
     maps:
     - 1
     grids:
@@ -639808,7 +640141,11 @@ floors:
               version: 7
             2,-3:
               ind: 2,-3
+<<<<<<< Updated upstream
               tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADXAAAAAAAA1wAAAAAAANcAAAAAAADXAAAAAAAA1wAAAAAAANcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1wAAAAAAANcAAAAAAADXAAAAAAAA1wAAAAAAANcAAAAAAADXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANcAAAAAAADXAAAAAAAA1wAAAAAAANcAAAAAAADXAAAAAAAA1wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADXAAAAAAAA1wAAAAAAANcAAAAAAADXAAAAAAAA1wAAAAAAANcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1wAAAAAAANcAAAAAAADXAAAAAAAA1wAAAAAAANcAAAAAAADXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANcAAAAAAADXAAAAAAAA1wAAAAAAANcAAAAAAADXAAAAAAAA1wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADXAAAAAAAA1wAAAAAAANcAAAAAAADXAAAAAAAA1wAAAAAAANcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1wAAAAAAANcAAAAAAADXAAAAAAAA1wAAAAAAANcAAAAAAADXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANcAAAAAAADXAAAAAAAA1wAAAAAAANcAAAAAAADXAAAAAAAA1wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADXAAAAAAAA1wAAAAAAANcAAAAAAADXAAAAAAAA1wAAAAAAANcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+=======
+              tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+>>>>>>> Stashed changes
               version: 7
             0,-2:
               ind: 0,-2
@@ -639834,10 +640171,13 @@ floors:
               ind: 2,0
               tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAABIAAAAAAAASAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
               version: 7
+<<<<<<< Updated upstream
             3,-3:
               ind: 3,-3
               tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADXAAAAAAAA1wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1wAAAAAAANcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANcAAAAAAADXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
               version: 7
+=======
+>>>>>>> Stashed changes
         - type: GridPathfinding
         - type: Gravity
           inherent: True
@@ -640803,7 +641143,11 @@ floors:
           parent: 1
           pos: 41.5,-14.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.48496243
+=======
+          accumulator: 0.91283166
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 70
@@ -640812,7 +641156,11 @@ floors:
           parent: 1
           pos: 40.5,-8.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.20651983
+=======
+          accumulator: 0.85699123
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 93
@@ -640821,7 +641169,11 @@ floors:
           parent: 1
           pos: 40.5,-27.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.88537055
+=======
+          accumulator: 0.939477
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 94
@@ -640830,7 +641182,11 @@ floors:
           parent: 1
           pos: 41.5,-20.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.0033961413
+=======
+          accumulator: 0.7189578
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 13404
@@ -640840,7 +641196,11 @@ floors:
           rot: 3.141592653589793 rad
           pos: 25.5,-27.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.18599972
+=======
+          accumulator: 0.110627405
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 13405
@@ -640850,7 +641210,11 @@ floors:
           rot: 3.141592653589793 rad
           pos: 25.5,-8.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.7013407
+=======
+          accumulator: 0.54641455
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 13409
@@ -640860,7 +641224,11 @@ floors:
           rot: 3.141592653589793 rad
           pos: 25.5,-14.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.31402653
+=======
+          accumulator: 0.16076192
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 13412
@@ -640870,7 +641238,11 @@ floors:
           rot: 3.141592653589793 rad
           pos: 25.5,-20.5
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.0046477425
+=======
+          accumulator: 0.6150647
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
     - proto: MarkerWeatherblocker
@@ -641525,6 +641897,7 @@ floors:
         - type: Transform
           parent: 1
           pos: 40.5,-20.5
+<<<<<<< Updated upstream
       - uid: 688
         components:
         - type: Transform
@@ -641535,6 +641908,8 @@ floors:
         - type: Transform
           parent: 1
           pos: 40.5,-17.5
+=======
+>>>>>>> Stashed changes
       - uid: 17038
         components:
         - type: Transform
@@ -647711,11 +648086,14 @@ floors:
         - type: Transform
           parent: 1
           pos: 45.5,-14.5
+<<<<<<< Updated upstream
       - uid: 768
         components:
         - type: Transform
           parent: 1
           pos: 20.5,-8.5
+=======
+>>>>>>> Stashed changes
     - proto: N14BarricadeMetal
       entities:
       - uid: 51
@@ -647723,16 +648101,40 @@ floors:
         - type: Transform
           parent: 1
           rot: 3.141592653589793 rad
+<<<<<<< Updated upstream
           pos: 32.4999,-9.334878
           anchored: False
         - type: Physics
           bodyType: Dynamic
       - uid: 759
+=======
+          pos: 32.515858,-9.388211
+          anchored: False
+        - type: Physics
+          bodyType: Dynamic
+      - uid: 84
+>>>>>>> Stashed changes
         components:
         - type: Transform
           parent: 1
           rot: 3.141592653589793 rad
+<<<<<<< Updated upstream
           pos: 31.5,-23.5
+=======
+          pos: 33.461052,-9.379166
+          anchored: False
+        - type: Physics
+          bodyType: Dynamic
+      - uid: 38988
+        components:
+        - type: Transform
+          parent: 1
+          rot: 3.141592653589793 rad
+          pos: 31.5742,-9.3923
+          anchored: False
+        - type: Physics
+          bodyType: Dynamic
+>>>>>>> Stashed changes
     - proto: N14BarricadeRazorwire
       entities:
       - uid: 67
@@ -647753,6 +648155,7 @@ floors:
         - type: Transform
           parent: 1
           pos: 32.5,-8.5
+<<<<<<< Updated upstream
       - uid: 762
         components:
         - type: Transform
@@ -647782,6 +648185,8 @@ floors:
           parent: 1
           rot: -1.5707963267948966 rad
           pos: 34.5,-9.5
+=======
+>>>>>>> Stashed changes
       - uid: 39109
         components:
         - type: Transform
@@ -647809,6 +648214,7 @@ floors:
           parent: 1
           rot: 1.5707963267948966 rad
           pos: 33.5,-9.5
+<<<<<<< Updated upstream
       - uid: 84
         components:
         - type: Transform
@@ -647833,6 +648239,8 @@ floors:
           parent: 1
           rot: 1.5707963267948966 rad
           pos: 30.5,-23.5
+=======
+>>>>>>> Stashed changes
       - uid: 39260
         components:
         - type: Transform
@@ -647857,6 +648265,7 @@ floors:
           parent: 1
           rot: -1.5707963267948966 rad
           pos: 42.5,-27.5
+<<<<<<< Updated upstream
       - uid: 767
         components:
         - type: Transform
@@ -647881,6 +648290,8 @@ floors:
           parent: 1
           rot: 3.141592653589793 rad
           pos: 22.5,-27.5
+=======
+>>>>>>> Stashed changes
       - uid: 39544
         components:
         - type: Transform
@@ -648065,12 +648476,15 @@ floors:
           pos: 31.1389,-19.8816
     - proto: N14ChairArmchair
       entities:
+<<<<<<< Updated upstream
       - uid: 756
         components:
         - type: Transform
           parent: 1
           rot: -1.5707963267948966 rad
           pos: 37.613426,-26.55304
+=======
+>>>>>>> Stashed changes
       - uid: 39796
         components:
         - type: Transform
@@ -648502,6 +648916,7 @@ floors:
         - type: Transform
           parent: 1
           pos: 30.7957,-15.1876
+<<<<<<< Updated upstream
     - proto: N14FitnessWeightsBench1
       entities:
       - uid: 757
@@ -648513,6 +648928,8 @@ floors:
           anchored: False
         - type: Physics
           bodyType: Dynamic
+=======
+>>>>>>> Stashed changes
     - proto: N14FlagWallEnclave
       entities:
       - uid: 119
@@ -648777,6 +649194,15 @@ floors:
         - type: Transform
           parent: 1
           pos: 25.5,-7.5
+<<<<<<< Updated upstream
+=======
+      - uid: 46184
+        components:
+        - type: Transform
+          parent: 1
+          rot: -1.5707963267948966 rad
+          pos: 34.5,-20.5
+>>>>>>> Stashed changes
       - uid: 46185
         components:
         - type: Transform
@@ -648960,11 +649386,14 @@ floors:
         - type: Transform
           parent: 1
           pos: 29.5,-6.5
+<<<<<<< Updated upstream
       - uid: 758
         components:
         - type: Transform
           parent: 1
           pos: 37.5,-25.5
+=======
+>>>>>>> Stashed changes
       - uid: 48714
         components:
         - type: Transform
@@ -649264,10 +649693,14 @@ floors:
         - type: Transform
           parent: 1
           rot: -1.5707963267948966 rad
+<<<<<<< Updated upstream
           pos: 37.54282,-19.618902
           anchored: False
         - type: Physics
           bodyType: Dynamic
+=======
+          pos: 35.5,-19.5
+>>>>>>> Stashed changes
       - uid: 61931
         components:
         - type: Transform
@@ -651516,6 +651949,7 @@ floors:
           parent: 1
           rot: 1.5707963267948966 rad
           pos: 7.5,-44.5
+<<<<<<< Updated upstream
       - uid: 687
         components:
         - type: Transform
@@ -651846,6 +652280,8 @@ floors:
         - type: Transform
           parent: 1
           pos: 49.5,-36.5
+=======
+>>>>>>> Stashed changes
       - uid: 50824
         components:
         - type: Transform
@@ -653833,7 +654269,11 @@ floors:
       engineVersion: 286.0.0
       forkId: ""
       forkVersion: ""
+<<<<<<< Updated upstream
       time: 11/17/2026 15:34:15
+=======
+      time: 11/17/2026 01:20:28
+>>>>>>> Stashed changes
       entityCount: 2403
     maps:
     - 1
@@ -656155,7 +656595,11 @@ floors:
         - type: Physics
           bodyType: Dynamic
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.27530318
+=======
+          accumulator: 0.6835766
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 13407
@@ -656168,7 +656612,11 @@ floors:
         - type: Physics
           bodyType: Dynamic
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.16615005
+=======
+          accumulator: 0.48171443
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
       - uid: 13411
@@ -656181,7 +656629,11 @@ floors:
         - type: Physics
           bodyType: Dynamic
         - type: Drain
+<<<<<<< Updated upstream
           accumulator: 0.060535364
+=======
+          accumulator: 0.18590595
+>>>>>>> Stashed changes
         - type: Fixtures
           fixtures: {}
     - proto: Magazine308M60Box

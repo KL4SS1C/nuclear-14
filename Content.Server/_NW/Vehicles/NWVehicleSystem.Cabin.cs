@@ -463,19 +463,15 @@ public sealed partial class NWVehicleSystem
             !_cabinHands.TryGetActiveItem(args.User, out var item) || item != args.Used ||
             !_equipmentSlots.TryInsertFromHand(hull, slot, args.User)) return;
         args.Handled = true;
-        // Prepare an empty chamber without ejecting any live round already loaded.
-        PrepareMountedGun(hull, args.User);
+        // Loading ammunition must not operate the bolt. The seated gunner uses
+        // ActionNWVehicleReadyGun explicitly when ready to chamber a round.
     }
 
     private void OnCabinAmmoEject(Entity<NWVehicleCabinAmmoFeedComponent> ent, ref ActivateInWorldEvent args)
     {
-        if (args.Handled || !CabinExterior(ent, out var hull) || !TryComp<NWVehicleComponent>(hull, out var vehicle) || vehicle.GunnerSeat < 0) return;
+        if (args.Handled) return;
+        OpenInspection(ent.Owner, args.User);
         args.Handled = true;
-        if (_equipmentSlots.TryEject(hull, "gun_magazine", args.User, out var magazine))
-        {
-            _transform.SetCoordinates(magazine.Value, Transform(args.User).Coordinates);
-            _cabinHands.PickupOrDrop(args.User, magazine.Value);
-        }
     }
 
     private void TransferCabinToWreck(EntityUid exterior, EntityUid wreck)

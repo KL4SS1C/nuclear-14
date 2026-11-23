@@ -41,22 +41,6 @@
   name: transit button
   description: Press to travel to the linked endpoint.
   components:
-  - type: WallMount
-  - type: NWTransitLink
-    arrivalOffset: 0,-1
   - type: Sprite
-    drawdepth: WallMountedItems
     sprite: Structures/Wallmounts/switch.rsi
     state: "on"
-
-- type: entity
-  id: NWTransitLadderTopBunkerOpen
-  parent: NWTransitHatch
-  name: open bunker entrance
-  description: Climb down into the bunker.
-  components:
-  - type: Sprite
-    sprite: _Nuclear14/Structures/Misc/laddersms13.rsi
-    state: bunker_open
-    noRot: true
-    offset: 0,0.25

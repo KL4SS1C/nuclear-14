@@ -1,0 +1,170 @@
+# RMC furniture adapted to Nuclear-14. See LICENSES/ATTRIBUTION.md.
+- type: entity
+  parent: SeatBase
+  id: NWCouchMid
+  name: couch
+  description: An upholstered modular couch.
+  suffix: Mid, Double
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/Couches/couch.rsi
+    state: couch_mid
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger: !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts:
+        - Destruction
+- type: entity
+  parent: NWCouchMid
+  id: NWCouchEnd
+  suffix: End, Double
+  components:
+  - type: Sprite
+    state: couch_end
+- type: entity
+  parent: NWCouchMid
+  id: NWCouchMidAlt
+  suffix: Mid, Double, Alt
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/Couches/couch_alt.rsi
+    state: couch_mid
+- type: entity
+  parent: NWCouchMidAlt
+  id: NWCouchEndAlt
+  suffix: End, Double, Alt
+  components:
+  - type: Sprite
+    state: couch_end
+- type: entity
+  parent: NWCouchMid
+  id: NWCouchMidRed
+  name: red couch
+  suffix: Mid
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/Couches/red_couch.rsi
+    state: couch_mid
+- type: entity
+  parent: NWCouchMidRed
+  id: NWCouchEndLowerRed
+  name: red couch
+  suffix: End, Lower
+  components:
+  - type: Sprite
+    state: couch_end_lower
+- type: entity
+  parent: NWCouchMidRed
+  id: NWCouchEndUpperRed
+  name: red couch
+  suffix: End, Upper
+  components:
+  - type: Sprite
+    state: couch_end_upper
+- type: entity
+  parent: NWCouchMid
+  id: NWCouchMidBlack
+  name: black couch
+  suffix: Mid
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/Couches/black_couch.rsi
+    state: couch_mid
+- type: entity
+  parent: NWCouchMidBlack
+  id: NWCouchEndLowerBlack
+  suffix: End, Lower
+  components:
+  - type: Sprite
+    state: couch_end_lower
+- type: entity
+  parent: NWCouchMidBlack
+  id: NWCouchEndUpperBlack
+  suffix: End, Upper
+  components:
+  - type: Sprite
+    state: couch_end_upper
+- type: entity
+  parent: NWCouchMid
+  id: NWCouchMidBrown
+  name: brown couch
+  suffix: Mid
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/Couches/brown_couch.rsi
+    state: couch_mid
+- type: entity
+  parent: NWCouchMidBrown
+  id: NWCouchEndLowerBrown
+  suffix: End, Lower
+  components:
+  - type: Sprite
+    state: couch_end_lower
+- type: entity
+  parent: NWCouchMidBrown
+  id: NWCouchEndUpperBrown
+  suffix: End, Upper
+  components:
+  - type: Sprite
+    state: couch_end_upper
+- type: entity
+  parent: NWCouchMidBrown
+  id: NWCouchMidBrownAlt
+  name: brown couch
+  suffix: Mid, Alt
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/Couches/brown_couch_alt.rsi
+    state: couch_mid
+- type: entity
+  parent: NWCouchMidBrownAlt
+  id: NWCouchEndLowerBrownAlt
+  suffix: End, Lower, Alt
+  components:
+  - type: Sprite
+    state: couch_end_lower
+- type: entity
+  parent: NWCouchMidBrownAlt
+  id: NWCouchEndUpperBrownAlt
+  suffix: End, Upper, Alt
+  components:
+  - type: Sprite
+    state: couch_end_upper
+- type: entity
+  parent: NWCouchMid
+  id: NWCouchLeftBar
+  suffix: Left
+  name: bar booth
+  description: An old wooden booth with red cushioning. There are stains in the cushions.
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/Couches/couch_bar.rsi
+    state: couch_left
+- type: entity
+  parent: NWCouchLeftBar
+  id: NWCouchRightBar
+  suffix: Right
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/Couches/couch_bar.rsi
+    state: couch_right

@@ -1,0 +1,192 @@
+# RMC furniture adapted to Nuclear-14. See LICENSES/ATTRIBUTION.md.
+- type: entity
+  parent: BaseStructure
+  id: NWBed
+  name: bed
+  suffix: NW
+  description: A mattress seated on a rectangular metallic frame. This is used to
+    support a lying person in a comfortable manner, notably for regular sleep. Ancient
+    technology, but still useful.
+  components:
+  - type: Transform
+    anchored: true
+    noRot: true
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/bed.rsi
+    state: bed
+    noRot: true
+  - type: InteractionOutline
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger: !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts:
+        - Destruction
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.45,-0.45,0.45,0.05
+        density: 190
+        mask:
+        - TableMask
+  - type: Strap
+    position: Down
+    rotation: -90
+  - type: PlaceableSurface
+    placeCentered: true
+  - type: Anchorable
+  - type: Pullable
+- type: entity
+  parent: NWBed
+  id: NWBedAlt
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/bed.rsi
+    state: abed
+  suffix: NW, Alternate
+  name: bed
+- type: entity
+  parent: NWBed
+  id: NWBedPsych
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/bed.rsi
+    state: psychbed
+  suffix: NW
+  name: psychiatric bed
+- type: entity
+  parent: NWBed
+  id: NWBedDingy
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/bed.rsi
+    state: dingy_bed
+  suffix: NW
+  name: worn bed
+- type: entity
+  parent: NWBed
+  id: NWBedAlien
+  name: alien bed
+  suffix: NW|Alien
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/bed.rsi
+    state: alien_bed
+- type: entity
+  parent: NWBed
+  id: NWBedBunkBase
+  abstract: true
+  components:
+  - type: Transform
+    anchored: true
+    noRot: false
+  - type: Physics
+    bodyType: Static
+  suffix: NW
+- type: entity
+  parent: NWBedBunkBase
+  id: NWBedBunk
+  name: black bunk-bed
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/bed.rsi
+    state: bunk_black
+  suffix: NW
+- type: entity
+  parent: NWBedBunkBase
+  id: NWBedBunkBlue
+  name: blue bunk-bed
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/bed.rsi
+    state: bunk_blue
+  suffix: NW
+- type: entity
+  parent: NWBedBunkBase
+  id: NWBedBunkGreen
+  name: green bunk-bed
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/bed.rsi
+    state: bunk_green
+  suffix: NW
+- type: entity
+  parent: NWBedBunkGreen
+  id: NWBedBunkGreenUnanchored
+  suffix: NW|Unanchored
+  components:
+  - type: Transform
+    anchored: false
+  - type: Physics
+    bodyType: Dynamic
+- type: entity
+  parent: NWBedBunkBase
+  id: NWBedBunkRed
+  name: red bunk-bed
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/bed.rsi
+    state: bunk_red
+  suffix: NW
+- type: entity
+  parent: NWBedBunkBase
+  id: NWBedBunkNoSheets
+  name: bunk-bed
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/bed.rsi
+    state: prisonbed
+  suffix: NW
+- type: entity
+  parent: NWBedBunkBase
+  id: NWBedBunkBrown
+  name: brown bunk-bed
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/bed.rsi
+    state: bunk_brown
+  suffix: NW
+# Inherit the installed Nuclear-14 bedroll behavior; override appearance only.
+- type: entity
+  parent: N14Bedroll
+  id: NWBedroll
+  name: sleeping bag
+  suffix: NW
+  description: A portable sleeping bag for resting on the road.
+  components:
+  - type: Sprite
+    sprite: _NW/Structures/Furniture/bedroll.rsi
+    noRot: true
+    layers:
+    - state: bedroll
+      map: ["unfoldedLayer"]
+    - state: bedroll_folded
+      map: ["foldedLayer"]
+      visible: false
+    - state: bedroll_pillow
+      map: ["buckledLayer"]
+      visible: false
+
+- type: entity
+  parent: NWBedroll
+  id: NWBedrollFolded
+  suffix: NW, Folded
+  components:
+  - type: Foldable
+    folded: true

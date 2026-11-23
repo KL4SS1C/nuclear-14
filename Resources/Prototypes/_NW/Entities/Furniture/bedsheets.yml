@@ -1,0 +1,127 @@
+# RMC furniture adapted to Nuclear-14. See LICENSES/ATTRIBUTION.md.
+- type: entity
+  parent: BaseItem
+  id: NWBedsheetBase
+  name: bedsheet
+  description: A surprisingly soft linen bedsheet.
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Bed
+  components:
+  - type: Sprite
+    sprite: _NW/Objects/Misc/bedsheets.rsi
+    noRot: true
+  - type: Item
+    size: Small
+  - type: StaticPrice
+    price: 100
+  - type: Tag
+    tags:
+    - Bedsheet
+  suffix: NW
+- type: entity
+  parent: NWBedsheetBase
+  id: NWBedsheetBlue
+  components:
+  - type: Sprite
+    state: sheetblue
+  suffix: NW
+  name: blue bedsheet
+- type: entity
+  parent: NWBedsheetBase
+  id: NWBedsheetGreen
+  components:
+  - type: Sprite
+    state: sheetgreen
+  suffix: NW
+  name: green bedsheet
+- type: entity
+  parent: NWBedsheetBase
+  id: NWBedsheetOrange
+  components:
+  - type: Sprite
+    state: sheetorange
+  suffix: NW
+  name: orange bedsheet
+- type: entity
+  parent: NWBedsheetBase
+  id: NWBedsheetPurple
+  components:
+  - type: Sprite
+    state: sheetpurple
+  suffix: NW
+  name: purple bedsheet
+- type: entity
+  parent: NWBedsheetBase
+  id: NWBedsheetWhite
+  components:
+  - type: Sprite
+    state: sheetwhite
+  suffix: NW
+  name: white bedsheet
+- type: entity
+  parent: NWBedsheetBase
+  id: NWBedsheetRed
+  components:
+  - type: Sprite
+    state: sheetred
+  suffix: NW
+  name: red bedsheet
+- type: entity
+  parent: NWBedsheetBase
+  id: NWBedsheetYellow
+  components:
+  - type: Sprite
+    state: sheetyellow
+  suffix: NW
+  name: yellow bedsheet
+- type: entity
+  parent: NWBedsheetBase
+  id: NWBedsheetGrayOrange
+  components:
+  - type: Sprite
+    state: sheetgrayorange
+  suffix: NW
+  name: grey and orange bedsheet
+- type: entity
+  parent: NWBedsheetBase
+  id: NWBedsheetMedical
+  components:
+  - type: Sprite
+    state: sheetmedical
+  suffix: NW
+  name: medical bedsheet
+- type: entity
+  parent: NWBedsheetBase
+  id: NWBedsheetOrangeFull
+  components:
+  - type: Sprite
+    state: sheetorangefull
+  suffix: NW
+  name: solid orange bedsheet
+- type: entity
+  parent: NWBedsheetBase
+  id: NWBedsheetGray
+  components:
+  - type: Sprite
+    state: sheetgray
+  suffix: NW
+  name: grey bedsheet
+- type: entity
+  parent: NWBedsheetBase
+  id: NWBedsheetBrown
+  components:
+  - type: Sprite
+    state: sheetbrown
+  suffix: NW
+  name: brown bedsheet
+- type: entity
+  parent: NWBedsheetWhite
+  id: NWBedsheetSoro
+  components:
+  - type: Sprite
+    color: '#798675'
+  suffix: NW
+  name: olive green bedsheet

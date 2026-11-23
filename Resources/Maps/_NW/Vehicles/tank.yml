@@ -153,8 +153,10 @@ entities:
   - uid: 38
     components:
     - type: Transform
-      pos: 1.340075,-1.3274913
+      pos: 0.75,-1.3274913
       parent: 2
+    - type: Sprite
+      offset: 0.590075,0
 - proto: NWvehicleTankCabinVehicleInteriorExtinguisher
   entities:
   - uid: 29

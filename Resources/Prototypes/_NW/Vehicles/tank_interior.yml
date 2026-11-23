@@ -68,6 +68,11 @@
   - type: InteractionOutline
   - type: Clickable
   - type: NWVehicleCabinAmmoFeed
+  - type: NWVehicleInspection
+  - type: UserInterface
+    interfaces:
+      enum.NWVehicleInspectionUiKey.Key:
+        type: NWVehicleInspectionBoundUserInterface
   - type: NWVehicleCabinFixture
 - type: entity
   id: NWvehicleTankCabinVehicleInteriorExtinguisher
